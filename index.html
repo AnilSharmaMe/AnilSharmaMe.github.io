@@ -1,93 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Netra - Identify. Verify. Protect.</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin:0; padding:0; line-height:1.6; background-color:#f9f9f9; color:#1f2937;}
-  section { max-width:800px; margin:2rem auto; padding:0 1rem; }
-  h2 { font-size:2rem; margin-bottom:1rem; text-align:center; color:#111827;}
-  h3 { font-size:1.25rem; margin:1rem 0 0.5rem; color:#111827;}
-  p { margin-bottom:1rem; }
-  ul { margin-left:1.2rem; margin-bottom:1rem; }
-  img { max-width:100%; border-radius:16px; box-shadow:0 3px 10px rgba(0,0,0,0.1);}
-  .button { display:inline-block; padding:0.8rem 1.5rem; background-color:#1d4ed8; color:white; border-radius:12px; font-weight:bold; text-decoration:none; }
-  .feature-list li { margin-bottom:0.5rem; }
-  .alert-feature { border-left: 4px solid #ef4444; padding-left: 1rem; margin-top: 1.5rem; } /* New style for emphasis */
-  footer { text-align:center; font-size:0.85rem; color:#6b7280; margin:3rem 0 1rem; }
-  footer a { color:#1d4ed8; text-decoration:none; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotter — Real-Time Community Safety</title>
+  <meta name="description" content="Spotter delivers real-time safety alerts, face matching, and community-powered awareness to help you stay one step ahead." />
+  <style>
+    :root {
+      --primary: #e53935;
+      --dark: #121212;
+      --light: #ffffff;
+      --muted: #6b7280;
+      --bg: #f5f6f8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff5252, #e53935);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
+    }
+
+    .cta {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .highlight p {
+      max-width: 720px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .list {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .list li {
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #0f0f0f;
+      color: #9ca3af;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer strong { color: white; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
 </head>
 <body>
 
-<section>
-  <h2>Netra – Identify. Verify. Protect.</h2>
-  <p style="text-align:center;">Your secure, private shield for **face comparison and hyper-local incident alerting**.</p>
-  <div style="text-align:center; margin:2rem 0;">
-    <img src="icon.png" alt="Netra App Icon" style="width:120px; height:120px;">
-  </div>
-</section>
+<header>
+  <h1>Spotter</h1>
+  <p>Real-time, community-powered safety alerts that help you stay one step ahead of danger.</p>
+  <a class="cta" href="#">Download on the App Store</a>
+</header>
 
 <section>
-  <h2>Feature 1: Instant Threat Detection (Face Scan)</h2>
-  <p>Netra lets you compare faces quickly and securely against multiple watchlists without ever sending your photos to the cloud.</p>
-  
-  <h3>How It Works:</h3>
-  <ul class="feature-list">
-    <li><strong>Scan Faces:</strong> Use your camera or select a photo to scan for faces.</li>
-    <li><strong>Private Vault:</strong> Save faces to a private, on-device list for comparison.</li>
-    <li><strong>Local Processing:</strong> All facial recognition and comparison happen **on your device** — nothing is uploaded.</li>
-    <li><strong>Fast & Private:</strong> Get instant results, with no personal data collected or shared.</li>
-  </ul>
-</section>
+  <h2 class="section-title">Why Spotter?</h2>
+  <p class="section-subtitle">
+    Awareness is the first line of defense. Spotter delivers instant alerts when suspicious activity is reported nearby — so you’re never caught unaware.
+  </p>
 
-<section class="alert-feature">
-  <h2>Feature 2: Rapid Community Response (INCIDENT ALERT)</h2>
-  <p>When seconds count during a theft or carjacking, **INCIDENT ALERT** instantly mobilizes the people around you.</p>
-  <h3>Pinpoint Alerting with Location Data:</h3>
-  <ul class="feature-list">
-    <li><strong>One-Tap Broadcast:</strong> Press the **INCIDENT ALERT** button to instantly alert nearby users.</li>
-    <li><strong>Precise Location:</strong> The app captures your **latitude and longitude** to precisely pinpoint the incident on a map for recipients.</li>
-    <li><strong>Add Details:</strong> Quickly submit critical information (perpetrators, weapons, notes) to inform your community and ensure vigilance.</li>
-    <li><strong>Real-Time Map View:</strong> Recipients see the live location and the full details of the incident in the **TheftAlertMapDetailsView**.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Permissions Required:</h2>
-  <ul class="feature-list">
-    <li><strong>Camera Access:</strong> To scan faces from the live camera feed or add new faces to your Vault.</li>
-    <li><strong>Photo Library Access:</strong> To select an existing photo for scanning or for adding to your Vault.</li>
-    <li><strong>Location Services:</strong> **REQUIRED** to determine your **latitude and longitude** when sending an **INCIDENT ALERT**.</li>
-    <li><strong>Notifications:</strong> **REQUIRED** to receive real-time, high-priority alerts from other Netra users nearby.</li>
-  </ul>
+  <div class="features">
+    <div class="feature">
+      <h3>🚨 Live Spot Alerts</h3>
+      <p>Instant notifications when suspicious activity is spotted near your location.</p>
+    </div>
+    <div class="feature">
+      <h3>📍 Location Intelligence</h3>
+      <p>See exactly where incidents occur with precise, real-time mapping.</p>
+    </div>
+    <div class="feature">
+      <h3>🖼️ Visual Evidence</h3>
+      <p>Attach photos securely with built-in sensitive content protection.</p>
+    </div>
+    <div class="feature">
+      <h3>👤 Face Matching Vault</h3>
+      <p>Save and compare faces responsibly to identify repeat threats.</p>
+    </div>
+    <div class="feature">
+      <h3>🛡️ Privacy First</h3>
+      <p>On-device analysis and smart filtering designed with privacy in mind.</p>
+    </div>
+    <div class="feature">
+      <h3>🤝 Community Powered</h3>
+      <p>The more people use Spotter, the safer everyone becomes.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-  <h2>Why Choose Netra?</h2>
-  <ul class="feature-list">
-    <li>✅ Fully private — all face processing happens **on your device**.</li>
-    <li>✅ **INCIDENT ALERT** uses your **real-time coordinates** for precise, life-saving community alerting.</li>
-    <li>✅ Mobilize your community quickly with a **one-tap emergency broadcast**.</li>
-    <li>✅ Manage your own list of faces in the **Private Vault**.</li>
-    <li>✅ Fast, intuitive, and easy-to-use interface.</li>
-  </ul>
-</section>
+  <div class="highlight">
+    <h2>Built for Safety. Designed for Trust.</h2>
+    <p>
+      Spotter is designed to promote community awareness and personal safety. Alerts are user-generated, responsibly filtered, and never intended to replace emergency services.
+    </p>
 
-<section style="text-align:center;">
-  <a href="https://apps.apple.com/au/app/netra/id6752389405" class="button">Download Netra Today</a>
+    <ul class="list">
+      <li>✔ Encourages early awareness, not panic</li>
+      <li>✔ Smart filtering for images and text</li>
+      <li>✔ Clear, transparent alert details</li>
+      <li>✔ Apple-friendly privacy and safety standards</li>
+    </ul>
+  </div>
 </section>
 
 <section>
-  <h2>Support & Privacy</h2>
-  <p>If you have any questions or need assistance, email us at <a href="mailto:Anil.kumar.ait09@gmail.com">Anil.kumar.ait09@gmail.com</a>.</p>
-  <p>All photos and results are processed locally on your device. Netra **does not collect or upload** personal data.</p>
-  <p>Read our <a href="privacy-policy.html">Privacy Policy</a> for more information.</p>
+  <h2 class="section-title">Stay Alert. Stay Safe.</h2>
+  <p class="section-subtitle">
+    When someone spots danger, everyone should know. Spotter gives you eyes on the ground — in real time.
+  </p>
 </section>
 
 <footer>
-  &copy; 2025 Netra. All rights reserved.
+  <p><strong>Spotter</strong> © 2025 — Community Safety, Reimagined</p>
+  <p>This app does not replace emergency services. Always contact local authorities in urgent situations.</p>
 </footer>
 
 </body>
