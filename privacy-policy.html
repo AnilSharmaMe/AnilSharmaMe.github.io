@@ -19,17 +19,9 @@
         h1, h2, h3 {
             color: #222;
         }
-        h1 {
-            font-size: 2em;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 1.5em;
-        }
-        h3 {
-            font-size: 1.2em;
-            margin-top: 1em;
-        }
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; margin-top: 1.5em; }
+        h3 { font-size: 1.2em; margin-top: 1em; }
         section {
             background: #fff;
             padding: 20px;
@@ -37,16 +29,9 @@
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
-        ul {
-            padding-left: 20px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        ul { padding-left: 20px; }
+        a { color: #007BFF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -59,31 +44,18 @@
 <section>
     <h2>Introduction</h2>
     <p>
-        Spotter App (“we”, “our”, or “us”) values your privacy and is committed to protecting your personal information.
-        This Privacy Policy explains how we collect, use, store, and safeguard your information when you use the Spotter
-        mobile application.
+        Spotter App (“we”, “our”, or “us”) values your privacy and is committed to protecting your information.
+        This Privacy Policy explains how we collect, use, store, and safeguard information when you use the Spotter mobile application.
     </p>
 </section>
 
 <section>
     <h2>Information We Collect</h2>
     <ul>
-        <li>
-            <strong>Account & Device Information:</strong>
-            Information you provide such as email address, device identifiers, and app-specific identifiers.
-        </li>
-        <li>
-            <strong>Location Data:</strong>
-            Approximate or precise location data used to enable location-based alerts and mapping features.
-        </li>
-        <li>
-            <strong>Media:</strong>
-            Images or photos that you voluntarily upload, capture, or choose to save within the app.
-        </li>
-        <li>
-            <strong>Usage Data:</strong>
-            Diagnostic and usage information such as app interactions, feature usage, and crash logs.
-        </li>
+        <li><strong>Account & Device Information:</strong> App-specific identifiers and device information required for functionality.</li>
+        <li><strong>Location Data:</strong> Location data used to provide alerts and mapping features.</li>
+        <li><strong>Media:</strong> Images that you voluntarily upload, capture, receive, or choose to save within the app.</li>
+        <li><strong>Usage Data:</strong> Diagnostic and performance data such as feature usage and crash logs.</li>
     </ul>
 </section>
 
@@ -92,50 +64,65 @@
 
     <h3>What Face Data Is Collected</h3>
     <p>
-        The app processes face-related data only when you explicitly choose to save a face or when a face image
-        is processed for comparison purposes. This data may include:
+        Spotter processes face data only when you explicitly choose to save a face or when a received alert image
+        is processed for comparison. This may include:
     </p>
     <ul>
-        <li>Cropped face images derived from user-selected photos or incident alert images</li>
-        <li>Numerical face embeddings (vector representations) generated on-device</li>
+        <li>Cropped face images derived from user-selected or alert images</li>
+        <li>Numerical face embeddings (mathematical vector representations)</li>
     </ul>
 
     <p>
-        The app does <strong>not</strong> collect names, real-world identities, biometric identifiers,
+        The app does <strong>not</strong> collect names, real-world identities, biometric identifiers linked to a person,
         or government-issued identification.
     </p>
 
     <h3>How Face Data Is Used</h3>
     <p>
-        Face data is used exclusively to provide core app functionality, including:
+        Face data is used solely to provide core app functionality, including:
     </p>
     <ul>
-        <li>Allowing users to maintain a private face vault</li>
+        <li>Allowing users to maintain a private face vault on their own device</li>
         <li>Performing on-device face similarity comparisons</li>
-        <li>Displaying saved face images back to the user</li>
-        <li>Enabling users to manage or delete saved faces</li>
+        <li>Displaying saved face images to the user</li>
+        <li>Allowing users to manage or delete saved faces</li>
     </ul>
 
     <p>
-        Face data is <strong>not</strong> used for advertising, marketing, analytics, profiling, or tracking.
+        Face data is <strong>not</strong> used for advertising, analytics, profiling, tracking, or identity verification.
     </p>
 
     <h3>On-Device Processing</h3>
     <p>
-        All face detection, alignment, and embedding generation is performed entirely on the user’s device.
-        Face data is not processed in the cloud.
+        All face detection, alignment, and embedding generation occurs entirely on the user’s iPhone.
+        Facial embeddings are never uploaded to servers or processed in the cloud.
+    </p>
+</section>
+
+<section>
+    <h2>User-to-User Image Sharing</h2>
+    <p>
+        The app allows users to share incident or alert images with other users through notifications.
+        These shared images may contain faces.
+    </p>
+    <ul>
+        <li>Shared images are delivered to other users’ devices as alerts</li>
+        <li>If a recipient chooses to save a face, all face processing occurs locally on their own device</li>
+        <li>Facial embeddings are never transmitted between users</li>
+    </ul>
+    <p>
+        Spotter does not maintain a shared or centralized facial recognition database.
     </p>
 </section>
 
 <section>
     <h2>Data Storage & Retention</h2>
     <p>
-        Face images and derived face data are stored locally on your device within the app’s secure,
-        sandboxed storage area.
+        Face images and face embeddings are stored locally within the app’s secure, sandboxed storage on your device.
     </p>
     <ul>
-        <li>Face data is retained only for as long as you keep it</li>
-        <li>You may delete individual faces or all saved face data at any time within the app</li>
+        <li>Face data is retained only for as long as you choose to keep it</li>
+        <li>You may delete individual faces or all face data at any time within the app</li>
         <li>Deleting the app permanently removes all stored face data</li>
     </ul>
 </section>
@@ -143,37 +130,37 @@
 <section>
     <h2>Data Sharing & Disclosure</h2>
     <p>
-        We do not sell, rent, or share personal data or face data with third parties.
+        Spotter does not sell, rent, or share face data with third parties.
     </p>
     <p>
-        Face data is never transmitted to external servers and is not accessible by third-party service providers.
-        We may disclose information only if required by law or to protect legal rights.
+        Facial embeddings are never transmitted to external servers and are not accessible to third-party service providers.
+        Information may be disclosed only if required by law or to protect legal rights.
     </p>
 </section>
 
 <section>
     <h2>Security of Your Information</h2>
     <p>
-        We use reasonable technical and organizational safeguards to protect your information.
+        We apply reasonable technical and organizational safeguards to protect your information.
         All locally stored data benefits from iOS system-level encryption and sandboxing.
-        However, no system can be guaranteed to be 100% secure.
+        No system can be guaranteed to be completely secure.
     </p>
 </section>
 
 <section>
     <h2>Your Rights & Choices</h2>
     <ul>
-        <li>Access, review, or delete your stored information through the app</li>
+        <li>Access, review, or delete your information within the app</li>
         <li>Delete saved face data at any time</li>
         <li>Uninstall the app to permanently remove all stored data</li>
-        <li>Request information about your data by contacting us</li>
+        <li>Contact us with privacy-related questions</li>
     </ul>
 </section>
 
 <section>
     <h2>Children’s Privacy</h2>
     <p>
-        Spotter App is not intended for children under the age of 13.
+        Spotter App is not intended for children under 13.
         We do not knowingly collect personal or face data from children.
     </p>
 </section>
@@ -181,17 +168,16 @@
 <section>
     <h2>Changes to This Privacy Policy</h2>
     <p>
-        We may update this Privacy Policy from time to time.
-        Any changes will be posted on this page with an updated effective date.
-        Continued use of the app constitutes acceptance of the updated policy.
+        We may update this Privacy Policy periodically.
+        Updates will be posted with a revised effective date.
+        Continued use of the app indicates acceptance of the updated policy.
     </p>
 </section>
 
 <section>
     <h2>Contact Us</h2>
     <p>
-        If you have any questions or concerns about this Privacy Policy or our data practices,
-        please contact us at
+        If you have questions about this Privacy Policy or our data practices, contact us at
         <a href="mailto:Anil.kumar.ait09@gmail.com">Anil.kumar.ait09@gmail.com</a>.
     </p>
 </section>
