@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+    <!-- Background -->
+    <rect width="400" height="800" fill="#09090b"/>
+
+    <!-- Top Bar -->
+    <text x="24" y="60" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="800">Spotter</text>
+    <circle cx="360" cy="50" r="18" fill="#27272a"/>
+    <text x="360" y="56" fill="#a1a1aa" font-size="16" text-anchor="middle">👤</text>
+
+    <!-- Send Alert Button -->
+    <rect x="24" y="100" width="352" height="110" rx="24" fill="url(#alertGrad)"/>
+    <circle cx="74" cy="155" r="28" fill="rgba(255,255,255,0.2)"/>
+    <text x="74" y="165" fill="#ffffff" font-size="24" text-anchor="middle">⚠️</text>
+    <text x="124" y="145" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">Send Alert</text>
+    <text x="124" y="170" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="15">Notify your network instantly</text>
+    <path d="M330 155 L340 155 M335 150 L340 155 L335 160" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+
+    <!-- Live Activity Header -->
+    <text x="24" y="260" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">Live Activity</text>
+    <text x="376" y="260" fill="#3b82f6" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="end">See All</text>
+
+    <!-- Alert Card 1 -->
+    <rect x="24" y="290" width="352" height="140" rx="20" fill="#18181b"/>
+    <circle cx="64" cy="330" r="24" fill="rgba(249,115,22,0.15)"/>
+    <text x="64" y="338" fill="#f97316" font-size="22" text-anchor="middle">🔥</text>
+    <text x="104" y="325" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Hazard Detected</text>
+    <text x="360" y="325" fill="#a1a1aa" font-family="sans-serif" font-size="13" text-anchor="end">Just now</text>
+    <rect x="104" y="335" width="80" height="22" rx="6" fill="#27272a"/>
+    <text x="112" y="350" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="bold">Suspicious</text>
+    <text x="104" y="380" fill="#a1a1aa" font-family="sans-serif" font-size="14" width="250">Suspicious individual near the alley.</text>
+    <text x="104" y="405" fill="#3b82f6" font-family="sans-serif" font-size="13" font-weight="bold">👍 12</text>
+
+    <!-- Alert Card 2 -->
+    <rect x="24" y="450" width="352" height="140" rx="20" fill="#18181b"/>
+    <circle cx="64" cy="490" r="24" fill="rgba(59,130,246,0.15)"/>
+    <text x="64" y="498" fill="#3b82f6" font-size="22" text-anchor="middle">🚗</text>
+    <text x="104" y="485" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Incident Reported</text>
+    <text x="360" y="485" fill="#a1a1aa" font-family="sans-serif" font-size="13" text-anchor="end">10 mins ago</text>
+    <rect x="104" y="495" width="60" height="22" rx="6" fill="#27272a"/>
+    <text x="112" y="510" fill="#a1a1aa" font-family="sans-serif" font-size="11" font-weight="bold">Vehicle</text>
+    <text x="104" y="540" fill="#a1a1aa" font-family="sans-serif" font-size="14" width="250">Minor car crash at the intersection.</text>
+    <text x="104" y="565" fill="#3b82f6" font-family="sans-serif" font-size="13" font-weight="bold">👍 3</text>
+
+    <!-- Bottom Nav Bar -->
+    <rect x="0" y="710" width="400" height="90" fill="#18181b" opacity="0.95"/>
+    <text x="60" y="750" fill="#ffffff" font-size="24" text-anchor="middle">🏠</text>
+    <text x="153" y="750" fill="#a1a1aa" font-size="24" text-anchor="middle">👥</text>
+    <text x="246" y="750" fill="#a1a1aa" font-size="24" text-anchor="middle">📷</text>
+    <text x="340" y="750" fill="#a1a1aa" font-size="24" text-anchor="middle">⚙️</text>
+    <circle cx="60" cy="770" r="3" fill="#ffffff"/>
+
+    <defs>
+        <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f97316"/>
+            <stop offset="100%" stop-color="#dc2626"/>
+        </linearGradient>
+    </defs>
+</svg>

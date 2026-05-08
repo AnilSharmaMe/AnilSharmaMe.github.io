@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+    <rect width="400" height="800" fill="#000000"/>
+
+    <!-- Camera Viewfinder -->
+    <rect x="20" y="80" width="360" height="400" rx="20" fill="#1C1C1E"/>
+
+    <!-- Face Bounding Box -->
+    <rect x="100" y="150" width="200" height="250" fill="none" stroke="#F97316" stroke-width="4" stroke-dasharray="20, 10"/>
+    <text x="200" y="280" fill="#FFF" font-size="80" text-anchor="middle">👤</text>
+
+    <!-- Scanning Animation Line -->
+    <line x1="100" y1="200" x2="300" y2="200" stroke="#0A84FF" stroke-width="4">
+        <animate attributeName="y1" values="150;400;150" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="y2" values="150;400;150" dur="2s" repeatCount="indefinite" />
+    </line>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="400" height="100" fill="rgba(0,0,0,0.8)"/>
+    <text x="200" y="60" fill="#FFF" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">AI Face Scan</text>
+
+    <!-- Match Result Card -->
+    <rect x="20" y="500" width="360" height="200" rx="24" fill="#1C1C1E" stroke="#333" stroke-width="2"/>
+    <circle cx="70" cy="550" r="30" fill="#222"/>
+    <text x="70" y="560" fill="#FFF" font-size="30" text-anchor="middle">⚠️</text>
+
+    <text x="120" y="540" fill="#F97316" font-family="sans-serif" font-size="22" font-weight="bold">Match Found</text>
+    <text x="120" y="565" fill="#FFF" font-family="sans-serif" font-size="16">Confidence: 98%</text>
+
+    <rect x="120" y="585" width="200" height="10" rx="5" fill="#333"/>
+    <rect x="120" y="585" width="190" height="10" rx="5" fill="#F97316"/>
+
+    <rect x="120" y="620" width="220" height="40" rx="20" fill="#DC2626"/>
+    <text x="230" y="645" fill="#FFF" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Alert Network</text>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="720" width="400" height="80" fill="#111"/>
+    <text x="50" y="750" fill="#888" font-size="24" text-anchor="middle">🏠</text>
+    <text x="150" y="750" fill="#888" font-size="24" text-anchor="middle">👨‍👩‍👧‍👦</text>
+    <text x="250" y="750" fill="#0A84FF" font-size="24" text-anchor="middle">📷</text>
+    <text x="350" y="750" fill="#888" font-size="24" text-anchor="middle">⚙️</text>
+</svg>
