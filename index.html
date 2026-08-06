@@ -249,6 +249,7 @@
             position: relative;
             transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
             transition: transform 0.5s ease;
+            animation: floatDevice 6s ease-in-out infinite;
         }
 
         .device:hover {
@@ -473,6 +474,10 @@
         @keyframes fadeIn {
             to { opacity: 1; }
         }
+        @keyframes floatDevice {
+            0%, 100% { transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(0px); }
+            50% { transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(-20px); }
+        }
 
         /* --- Responsive --- */
         @media (max-width: 1024px) {
@@ -670,13 +675,36 @@
         </div>
     </section>
 
-    <footer>
-        <div class="logo" style="font-size: 1.2rem;">Spotter<span>.</span></div>
-        <p>&copy; 2026 Spotter Safety Network. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Support</a>
+    <footer style="padding: 80px 5% 40px; background: var(--bg-surface); border-top: 1px solid var(--border-subtle); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+        <div class="footer-col" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="logo" style="font-size: 1.5rem;">Spotter<span>.</span></div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 300px;">Smart safety for modern communities. Real-time alerts, local AI, and uncompromised privacy.</p>
+        </div>
+        <div class="footer-col" style="display: flex; flex-direction: column; gap: 12px;">
+            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 8px;">Product</h4>
+            <a href="#features" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Features</a>
+            <a href="#security" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Security</a>
+            <a href="https://apps.apple.com/au/app/spotterapp/id6755062103" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" target="_blank" rel="noopener noreferrer">Download iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=spotter.anilsharmame.github.com" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" target="_blank" rel="noopener noreferrer">Download Android</a>
+        </div>
+        <div class="footer-col" style="display: flex; flex-direction: column; gap: 12px;">
+            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 8px;">Company</h4>
+            <a href="#about" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">About Us</a>
+            <a href="#contact" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Contact</a>
+            <a href="mailto:Anil.kumar.ait09@gmail.com" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Support</a>
+        </div>
+        <div class="footer-col" style="display: flex; flex-direction: column; gap: 12px;">
+            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 8px;">Legal</h4>
+            <a href="privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Privacy Policy</a>
+            <a href="#" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Terms of Service</a>
+        </div>
+        <div style="grid-column: 1 / -1; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap; gap: 16px;">
+            <p>&copy; 2026 Spotter Safety Network. All rights reserved.</p>
+            <div class="social-links" style="display: flex; gap: 16px;">
+                <a href="#" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Twitter</a>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">LinkedIn</a>
+                <a href="https://github.com/AnilSharmaMe" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
         </div>
     </footer>
 
