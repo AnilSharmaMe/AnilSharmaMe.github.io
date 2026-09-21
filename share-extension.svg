@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+    <rect width="400" height="800" fill="#000000"/>
+
+    <!-- Dimmed source app behind (e.g. Photos) -->
+    <rect x="0" y="0" width="400" height="360" fill="#1c1c1e"/>
+    <rect x="20" y="60" width="110" height="110" rx="10" fill="#3a3a3c"/>
+    <rect x="140" y="60" width="110" height="110" rx="10" fill="#48484a"/>
+    <rect x="260" y="60" width="110" height="110" rx="10" fill="#3a3a3c"/>
+    <rect x="20" y="180" width="110" height="110" rx="10" fill="#48484a"/>
+    <rect x="140" y="180" width="110" height="110" rx="10" fill="#3a3a3c"/>
+    <text x="195" y="235" fill="#71717a" font-size="34" text-anchor="middle">🚪</text>
+    <text x="26" y="30" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="bold">Doorbell Camera</text>
+
+    <!-- iOS-style share sheet -->
+    <rect x="0" y="360" width="400" height="440" rx="24" fill="#1c1c1e"/>
+    <rect x="170" y="380" width="60" height="5" rx="2.5" fill="#48484a"/>
+
+    <text x="200" y="422" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="600" text-anchor="middle">Share</text>
+
+    <!-- App row -->
+    <g>
+        <circle cx="60" cy="470" r="30" fill="#2c2c2e"/>
+        <text x="60" y="478" font-size="24" text-anchor="middle">💬</text>
+        <text x="60" y="516" fill="#a1a1aa" font-family="sans-serif" font-size="11" text-anchor="middle">Messages</text>
+
+        <circle cx="140" cy="470" r="30" fill="#2c2c2e"/>
+        <text x="140" y="478" font-size="24" text-anchor="middle">📧</text>
+        <text x="140" y="516" fill="#a1a1aa" font-family="sans-serif" font-size="11" text-anchor="middle">Mail</text>
+
+        <!-- Spotter, highlighted -->
+        <circle cx="220" cy="470" r="32" fill="url(#appIconGrad)" stroke="#f97316" stroke-width="2"/>
+        <text x="220" y="479" font-size="24" text-anchor="middle">🔍</text>
+        <text x="220" y="518" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Spotter</text>
+
+        <circle cx="300" cy="470" r="30" fill="#2c2c2e"/>
+        <text x="300" y="478" font-size="24" text-anchor="middle">📝</text>
+        <text x="300" y="516" fill="#a1a1aa" font-family="sans-serif" font-size="11" text-anchor="middle">Notes</text>
+    </g>
+
+    <rect x="0" y="550" width="400" height="1" fill="#3a3a3c"/>
+
+    <rect x="24" y="580" width="352" height="52" rx="12" fill="#2c2c2e"/>
+    <text x="44" y="612" fill="#ffffff" font-family="sans-serif" font-size="15">Compare with Spotter</text>
+
+    <rect x="24" y="644" width="352" height="52" rx="12" fill="#2c2c2e"/>
+    <text x="44" y="676" fill="#ffffff" font-family="sans-serif" font-size="15">Save Image</text>
+
+    <text x="200" y="750" fill="#71717a" font-family="sans-serif" font-size="12" text-anchor="middle">Opens straight into Spotter's face-match flow</text>
+
+    <defs>
+        <linearGradient id="appIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3B82F6"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+    </defs>
+</svg>
