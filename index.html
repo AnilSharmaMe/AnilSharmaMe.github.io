@@ -303,6 +303,169 @@
             object-fit: cover;
         }
 
+        /* --- Live Activity hero mock: a hand-built recreation of the real Home screen,
+           rather than a screenshot, so it never goes stale when the app's UI changes and
+           can actually animate to show off the real-time alert feed. --- */
+        .lf-mock {
+            width: 100%;
+            height: 100%;
+            background: #F2F2F7;
+            color: #1C1C1E;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .lf-topbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px 0;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #1C1C1E;
+        }
+
+        .lf-dots { letter-spacing: 1px; font-size: 0.55rem; }
+
+        .lf-app-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 6px 18px 10px;
+            color: #000;
+        }
+
+        .lf-send-alert {
+            margin: 0 16px 14px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #FF9A3D, #FF3B30);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 16px rgba(255, 59, 48, 0.25);
+        }
+
+        .lf-send-alert-icon { font-size: 1.3rem; }
+        .lf-send-alert-text { flex: 1; }
+        .lf-send-alert-title { color: #fff; font-weight: 700; font-size: 0.85rem; }
+        .lf-send-alert-sub { color: rgba(255,255,255,0.9); font-size: 0.65rem; }
+        .lf-chevron { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+        .lf-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 18px 8px;
+        }
+
+        .lf-section-title { font-size: 1rem; font-weight: 700; color: #000; }
+        .lf-see-all { font-size: 0.7rem; color: var(--primary); font-weight: 600; }
+
+        .lf-tabs {
+            display: flex;
+            gap: 6px;
+            padding: 0 16px 10px;
+        }
+
+        .lf-tab {
+            font-size: 0.62rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 100px;
+            background: rgba(0,0,0,0.05);
+            color: #6B7280;
+        }
+
+        .lf-tab-active { background: #fff; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+
+        .lf-cards {
+            flex: 1;
+            padding: 0 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        .lf-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 12px 14px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            opacity: 0;
+            transform: translateY(-14px);
+            transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.4s ease, margin 0.4s ease, padding 0.4s ease;
+            max-height: 120px;
+            flex-shrink: 0;
+        }
+
+        .lf-card.lf-card-visible { opacity: 1; transform: translateY(0); }
+
+        .lf-card.lf-card-leaving {
+            opacity: 0;
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            border-width: 0;
+        }
+
+        .lf-card-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .lf-card-body { flex: 1; min-width: 0; }
+
+        .lf-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .lf-card-title { font-size: 0.72rem; font-weight: 700; }
+        .lf-card-time { font-size: 0.6rem; color: #9CA3AF; white-space: nowrap; }
+
+        .lf-card-tag {
+            display: inline-block;
+            font-size: 0.55rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 6px;
+            background: rgba(64, 114, 218, 0.1);
+            color: var(--primary);
+            margin: 3px 0 4px;
+        }
+
+        .lf-card-snippet {
+            font-size: 0.62rem;
+            color: #4B5563;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .lf-card-likes { font-size: 0.6rem; color: var(--primary); font-weight: 600; margin-top: 4px; }
+
+        .lf-caption {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-top: 20px;
+        }
+
         /* --- Trusted By --- */
         .trusted {
             text-align: center;
@@ -571,9 +734,34 @@
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <img src="screenshot-home.png" alt="Spotter App Interface">
+                        <div class="lf-mock">
+                            <div class="lf-topbar">
+                                <span class="lf-time">9:41</span>
+                                <span class="lf-dots">●●●</span>
+                            </div>
+                            <div class="lf-app-title">Spotter</div>
+                            <div class="lf-send-alert">
+                                <div class="lf-send-alert-icon">⚠️</div>
+                                <div class="lf-send-alert-text">
+                                    <div class="lf-send-alert-title">Send Alert</div>
+                                    <div class="lf-send-alert-sub">Notify your network instantly</div>
+                                </div>
+                                <div class="lf-chevron">›</div>
+                            </div>
+                            <div class="lf-row">
+                                <span class="lf-section-title">Live Activity</span>
+                                <span class="lf-see-all">See All</span>
+                            </div>
+                            <div class="lf-tabs">
+                                <span class="lf-tab lf-tab-active">All</span>
+                                <span class="lf-tab">Emergencies</span>
+                                <span class="lf-tab">Stolen Cars</span>
+                            </div>
+                            <div class="lf-cards" id="lfCards"></div>
+                        </div>
                     </div>
                 </div>
+                <p class="lf-caption">Demo preview — sample alerts for illustration</p>
             </div>
         </div>
     </section>
@@ -807,5 +995,75 @@
         </div>
     </footer>
 
+    <script>
+        // Drives the hero's "Live Activity" mock — a recreation of the real Home screen
+        // rather than a screenshot, so it can animate and never goes stale when the app's
+        // UI changes. Sample alerts only; see the "Demo preview" caption under the phone.
+        (function () {
+            var feed = document.getElementById('lfCards');
+            if (!feed) return;
+
+            var sampleAlerts = [
+                { icon: '🔥', bg: 'rgba(255,59,48,0.12)', title: 'Safety Alert: Fire', tag: 'Official Feed', snippet: 'Small kitchen fire reported, contained before crews arrived.', likes: 14 },
+                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', title: 'Stolen Vehicle Alert', tag: 'Official Feed', snippet: 'White Toyota HiLux reported stolen from Fitzroy Street car park overnight.', likes: 9 },
+                { icon: '👁️', bg: 'rgba(64,114,218,0.12)', title: 'Suspicious Activity', tag: 'Community', snippet: 'Unknown male checking car door handles along Church Street, moved on before police arrived.', likes: 6 },
+                { icon: '⚠️', bg: 'rgba(255,59,48,0.12)', title: 'Safety Alert: Bushfire', tag: 'Official Feed', snippet: 'Oxford Street | Status: UNCONTROLLED. Crews responding.', likes: 12 },
+                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', title: 'Stolen Vehicle Alert', tag: 'Official Feed', snippet: 'Vehicle reported stolen from Richmond car park overnight.', likes: 15 },
+                { icon: '👁️', bg: 'rgba(64,114,218,0.12)', title: 'Suspicious Activity', tag: 'Community', snippet: 'Group loitering near the Collins Street car park after hours.', likes: 4 }
+            ];
+
+            var timeStages = ['Just now', '1 min ago', '2 min ago', '4 min ago', '7 min ago', '12 min ago'];
+            var maxVisible = 4;
+            var nextIndex = 0;
+            var liveCards = []; // { el, stage }
+
+            function renderCard(alert) {
+                var card = document.createElement('div');
+                card.className = 'lf-card';
+                card.innerHTML =
+                    '<div class="lf-card-icon" style="background:' + alert.bg + '">' + alert.icon + '</div>' +
+                    '<div class="lf-card-body">' +
+                        '<div class="lf-card-top">' +
+                            '<span class="lf-card-title">' + alert.title + '</span>' +
+                            '<span class="lf-card-time">Just now</span>' +
+                        '</div>' +
+                        '<span class="lf-card-tag">' + alert.tag + '</span>' +
+                        '<div class="lf-card-snippet">' + alert.snippet + '</div>' +
+                        '<div class="lf-card-likes">👍 ' + alert.likes + '</div>' +
+                    '</div>';
+                return card;
+            }
+
+            function tick() {
+                // Age existing cards' relative timestamps.
+                liveCards.forEach(function (entry) {
+                    if (entry.stage < timeStages.length - 1) entry.stage++;
+                    var timeEl = entry.el.querySelector('.lf-card-time');
+                    if (timeEl) timeEl.textContent = timeStages[entry.stage];
+                });
+
+                // Add the next sample alert.
+                var alert = sampleAlerts[nextIndex % sampleAlerts.length];
+                nextIndex++;
+                var card = renderCard(alert);
+                feed.insertBefore(card, feed.firstChild);
+                liveCards.unshift({ el: card, stage: 0 });
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () { card.classList.add('lf-card-visible'); });
+                });
+
+                // Drop anything past the visible cap, with a fade/collapse out.
+                while (liveCards.length > maxVisible) {
+                    var oldest = liveCards.pop();
+                    oldest.el.classList.add('lf-card-leaving');
+                    oldest.el.classList.remove('lf-card-visible');
+                    setTimeout(function (el) { return function () { el.remove(); }; }(oldest.el), 450);
+                }
+            }
+
+            tick();
+            setInterval(tick, 3600);
+        })();
+    </script>
 </body>
 </html>
