@@ -40,19 +40,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Premium Dark Theme */
-            --bg-base: #0B0C10;
-            --bg-surface: #13151A;
-            --bg-surface-elevated: #1C1E26;
+            /* Clean Light Theme */
+            --bg-base: #FFFFFF;
+            --bg-surface: #F3F5F9;
+            --bg-surface-elevated: #FFFFFF;
             --primary: #4072DA;
             --primary-light: #7B9EE8;
             --primary-glow: rgba(64, 114, 218, 0.2);
             --accent-purple: #A659DA;
             --secondary: #3B82F6;
-            --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.15);
+            --text-primary: #13151A;
+            --text-secondary: #5B6472;
+            --border-subtle: rgba(15, 23, 42, 0.08);
+            --border-hover: rgba(15, 23, 42, 0.15);
             --radius-sm: 12px;
             --radius-md: 24px;
             --radius-lg: 32px;
@@ -72,14 +72,14 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             background-image:
-                radial-gradient(circle at 15% 50%, rgba(166, 89, 218, 0.08), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+                radial-gradient(circle at 15% 50%, rgba(166, 89, 218, 0.05), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05), transparent 25%);
             background-attachment: fixed;
         }
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-base); }
-        ::-webkit-scrollbar-thumb { background: var(--bg-surface-elevated); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #D5DAE1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
 
         h1, h2, h3, .logo {
@@ -98,13 +98,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(19, 21, 26, 0.7);
+            background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-subtle);
             border-radius: 100px;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
             transition: all 0.3s ease;
         }
 
@@ -167,14 +167,14 @@
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.03);
             color: var(--text-primary);
             border: 1px solid var(--border-subtle);
             backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.06);
             border-color: var(--border-hover);
             transform: translateY(-2px);
         }
@@ -207,10 +207,10 @@
             display: inline-flex;
             align-items: center;
             padding: 10px 22px;
-            background: rgba(64, 114, 218, 0.14);
-            border: 1.5px solid rgba(64, 114, 218, 0.35);
+            background: rgba(64, 114, 218, 0.1);
+            border: 1.5px solid rgba(64, 114, 218, 0.3);
             border-radius: 100px;
-            color: var(--primary-light);
+            color: var(--primary);
             font-size: 1rem;
             font-weight: 700;
             letter-spacing: 0.3px;
@@ -229,7 +229,7 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #FFFFFF 0%, #A5A5A5 100%);
+            background: linear-gradient(135deg, #10131A 0%, #4B5565 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -276,7 +276,7 @@
             padding: 8px;
             background: linear-gradient(145deg, #2A2D35 0%, #13151A 100%);
             box-shadow:
-                0 30px 60px rgba(0,0,0,0.6),
+                0 30px 60px rgba(15, 23, 42, 0.25),
                 inset 0 1px 1px rgba(255,255,255,0.2),
                 inset 0 -1px 1px rgba(0,0,0,0.5),
                 0 0 0 1px rgba(255,255,255,0.05);
@@ -560,7 +560,7 @@
             background: var(--bg-surface-elevated);
             border-color: var(--border-hover);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
         }
 
         /* Subtle glowing gradient on hover */
@@ -568,7 +568,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; height: 100%;
-            background: radial-gradient(circle at 50% -20%, rgba(255,255,255,0.05), transparent 70%);
+            background: radial-gradient(circle at 50% -20%, rgba(64, 114, 218, 0.06), transparent 70%);
             opacity: 0;
             transition: opacity 0.4s;
             pointer-events: none;
@@ -606,7 +606,7 @@
             width: 80%;
             height: auto;
             border-radius: 12px 12px 0 0;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.15);
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid var(--border-subtle);
             border-bottom: none;
@@ -867,7 +867,7 @@
                     <p>Set your own notification radius per alert category, from 1km up to 30km, so you only get the alerts that are actually relevant to you.</p>
                 </div>
                 <!-- Abstract visual for slider -->
-                <div style="margin-top: auto; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid var(--border-subtle);">
+                <div style="margin-top: auto; padding: 20px; background: rgba(15, 23, 42, 0.04); border-radius: 12px; border: 1px solid var(--border-subtle);">
                     <div style="display:flex; justify-content:space-between; margin-bottom: 8px; font-size: 0.85rem; color: var(--text-primary);">
                         <span>🚨 Emergencies</span>
                         <span style="color: var(--primary);">30 km</span>
