@@ -719,6 +719,38 @@
         }
 
         /* --- Responsive --- */
+
+        /* ---- Product demo video ---- */
+        .demo-section { padding: 100px 5% 40px; max-width: 1100px; margin: 0 auto; scroll-margin-top: 20px; }
+        .demo-wrap { display: flex; align-items: center; justify-content: center; gap: 72px; }
+        .demo-device {
+            flex: 0 0 auto;
+            width: 300px;
+            padding: 8px;
+            border-radius: 40px;
+            background: linear-gradient(145deg, #2A2D35 0%, #13151A 100%);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25), inset 0 1px 1px rgba(255,255,255,0.2), 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        .demo-device video { display: block; width: 100%; aspect-ratio: 720 / 1564; border-radius: 32px; background: #000; }
+        .demo-side { max-width: 420px; }
+        .demo-side h3 { font-size: 1.5rem; margin-bottom: 8px; }
+        .demo-side > p { color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6; }
+        .demo-chapters { display: flex; flex-wrap: wrap; gap: 8px; }
+        .demo-chapter {
+            border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-primary);
+            padding: 8px 14px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+        .demo-chapter:hover { border-color: var(--border-hover); }
+        .demo-chapter.active { background: var(--primary-glow); border-color: var(--primary); color: var(--primary); }
+        .demo-chapter span { color: var(--text-secondary); font-weight: 500; margin-left: 6px; font-variant-numeric: tabular-nums; }
+        .demo-note { font-size: 0.85rem; color: var(--text-secondary); margin-top: 20px; }
+        @media (max-width: 860px) {
+            .demo-wrap { flex-direction: column; gap: 40px; }
+            .demo-side { text-align: center; }
+            .demo-chapters { justify-content: center; }
+        }
+
         @media (max-width: 1024px) {
             .hero-content { flex-direction: column; text-align: center; gap: 60px; }
             .hero-text { max-width: 800px; }
@@ -748,6 +780,7 @@
     <nav>
         <div class="logo"><img src="app-icon.png" alt="Spotter logo" style="width: 32px; height: 32px; border-radius: 22%;">Spotter</div>
         <div class="nav-links">
+            <a href="#demo">Demo</a>
             <a href="#features">Features</a>
             <a href="#security">Security</a>
             <a href="#faq">FAQ</a>
@@ -823,6 +856,38 @@
             </div>
             <div class="trusted-badge">
                 <span style="color: #10B981">🔒</span> Privacy-First Design
+            </div>
+        </div>
+    </section>
+
+
+    <section id="demo" class="demo-section">
+        <div class="section-header" style="margin-bottom: 48px;">
+            <h2 class="gradient-text">See Spotter in action.</h2>
+            <p>A 90-second tour of the app, from live alerts to family location sharing.</p>
+        </div>
+        <div class="demo-wrap">
+            <div class="demo-device">
+                <video id="demoVideo" controls playsinline preload="metadata" poster="spotter-demo-poster.jpg" aria-label="Spotter app walkthrough">
+                    <source src="spotter-demo.mp4" type="video/mp4">
+                    Your browser doesn't support embedded video. <a href="spotter-demo.mp4">Download the demo</a>.
+                </video>
+            </div>
+            <div class="demo-side">
+                <h3>Everything in one walkthrough</h3>
+                <p>Tap a topic to jump straight to it: warnings before you arrive somewhere unfamiliar, live alerts by type, a heatmap of nearby incidents, private family location sharing, and more.</p>
+                <div class="demo-chapters" id="demoChapters">
+                    <button class="demo-chapter" data-t="0">Risk Radar<span>0:00</span></button>
+                    <button class="demo-chapter" data-t="6">Live alerts<span>0:06</span></button>
+                    <button class="demo-chapter" data-t="12">Alert details<span>0:12</span></button>
+                    <button class="demo-chapter" data-t="16">Send an alert<span>0:16</span></button>
+                    <button class="demo-chapter" data-t="24">Area Insights<span>0:24</span></button>
+                    <button class="demo-chapter" data-t="40">Family<span>0:40</span></button>
+                    <button class="demo-chapter" data-t="49">Spot<span>0:49</span></button>
+                    <button class="demo-chapter" data-t="57">Settings<span>0:57</span></button>
+                    <button class="demo-chapter" data-t="74">Spotter Plus<span>1:14</span></button>
+                </div>
+                <p class="demo-note">Shown on iPhone with sample data for illustration.</p>
             </div>
         </div>
     </section>
@@ -1129,6 +1194,27 @@
 
             tick();
             setInterval(tick, 3600);
+        })();
+    </script>
+
+    <script>
+        // Product demo: chapter buttons jump to a point in the video and highlight the current chapter.
+        (function () {
+            var video = document.getElementById('demoVideo');
+            var chapters = document.querySelectorAll('.demo-chapter');
+            if (!video || !chapters.length) return;
+            var times = Array.prototype.map.call(chapters, function (b) { return Number(b.dataset.t); });
+            chapters.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    video.currentTime = Number(btn.dataset.t);
+                    video.play();
+                });
+            });
+            video.addEventListener('timeupdate', function () {
+                var active = 0;
+                for (var i = 0; i < times.length; i++) { if (video.currentTime >= times[i]) active = i; }
+                chapters.forEach(function (b, i) { b.classList.toggle('active', i === active); });
+            });
         })();
     </script>
 </body>
