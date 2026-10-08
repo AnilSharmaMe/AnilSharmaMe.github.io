@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mynetra Pty Ltd | Software and Technology Company</title>
+    <meta name="description" content="Mynetra Pty Ltd (ACN 678 559 736) is an Australian software and technology company building privacy-first mobile apps and the cloud services behind them. Maker of Spotter.">
+    <link rel="canonical" href="https://spotterapp.com.au/mynetra.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spotterapp.com.au/mynetra.html">
+    <meta property="og:title" content="Mynetra Pty Ltd | Software and Technology Company">
+    <meta property="og:description" content="An Australian software and technology company building privacy-first mobile apps and the cloud services behind them. Maker of Spotter.">
+    <meta property="og:image" content="https://spotterapp.com.au/app-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mynetra Pty Ltd",
+      "url": "https://spotterapp.com.au/mynetra.html",
+      "identifier": "ACN 678 559 736",
+      "email": "partnerships@spotterapp.com.au",
+      "address": { "@type": "PostalAddress", "addressCountry": "AU" },
+      "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Spotter", "url": "https://spotterapp.com.au/" } }
+    }
+    </script>
+
+    <link rel="icon" href="app-icon.png">
+    <link rel="apple-touch-icon" href="app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #FFFFFF;
+            --bg-surface: #F3F5F9;
+            --bg-surface-elevated: #FFFFFF;
+            --primary: #4072DA;
+            --accent-purple: #A659DA;
+            --text-primary: #13151A;
+            --text-secondary: #5B6472;
+            --border-subtle: rgba(15, 23, 42, 0.08);
+            --border-hover: rgba(15, 23, 42, 0.15);
+            --radius-md: 24px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; }
+        a { color: var(--primary); }
+
+        nav { position: fixed; top: 24px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-subtle); border-radius: 100px; z-index: 1000; box-shadow: 0 10px 30px rgba(15,23,42,0.08); }
+        .logo { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--text-primary); }
+
+        .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn { display: inline-block; padding: 14px 32px; border-radius: 100px; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent-purple)); color: #fff; }
+        .btn-secondary { background: var(--bg-surface); color: var(--text-primary); border: 1px solid var(--border-subtle); }
+
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+        .hero { padding: 180px 0 70px; text-align: center; }
+        .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; }
+        .hero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto; }
+
+        section { padding: 50px 0; }
+        h2.section-title { font-size: clamp(1.8rem, 3.2vw, 2.4rem); letter-spacing: -0.8px; margin-bottom: 12px; }
+        .section-lead { color: var(--text-secondary); font-size: 1.1rem; max-width: 760px; margin-bottom: 32px; }
+
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .card { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 32px; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 10px; letter-spacing: -0.3px; }
+        .card p { color: var(--text-secondary); }
+
+        .product { display: flex; gap: 28px; align-items: center; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 32px; }
+        .product img { width: 96px; height: 96px; border-radius: 22%; flex-shrink: 0; }
+        .product h3 { font-size: 1.6rem; margin-bottom: 8px; }
+        .product p { color: var(--text-secondary); margin-bottom: 18px; }
+
+        dl.facts { display: grid; grid-template-columns: 200px 1fr; gap: 14px 24px; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 32px; }
+        dl.facts dt { color: var(--text-secondary); font-weight: 500; }
+        dl.facts dd { font-weight: 600; }
+
+        ul.plain { list-style: none; display: grid; gap: 10px; color: var(--text-secondary); margin-bottom: 28px; }
+        ul.plain li::before { content: "✓"; color: var(--primary); font-weight: 700; margin-right: 10px; }
+
+        footer { margin-top: 60px; padding: 40px 5%; background: var(--bg-surface); border-top: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.9rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        footer a { color: var(--text-secondary); text-decoration: none; margin-left: 20px; }
+        footer a:first-child { margin-left: 0; }
+
+        @media (max-width: 768px) {
+            nav { width: 95%; padding: 12px 24px; }
+            .nav-links { display: none; }
+            .hero { padding-top: 140px; }
+            .grid { grid-template-columns: 1fr; }
+            .product { flex-direction: column; text-align: center; }
+            dl.facts { grid-template-columns: 1fr; gap: 4px; }
+            dl.facts dd { margin-bottom: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="logo" href="/"><img src="app-icon.png" alt="Spotter logo" style="width: 32px; height: 32px; border-radius: 22%;">Spotter</a>
+        <div class="nav-links">
+            <a href="/">Spotter</a>
+            <a href="#what-we-do">What we do</a>
+            <a href="#partnerships">Partnerships</a>
+            <a href="#company">Company details</a>
+        </div>
+        <a href="mailto:partnerships@spotterapp.com.au" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Get in touch</a>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap">
+            <span class="eyebrow">Mynetra Pty Ltd</span>
+            <h1>Software built with <span class="gradient-text">privacy first</span></h1>
+            <p>Mynetra is an Australian software and technology company. We design and build mobile apps and the secure cloud services behind them, and we are upfront about what data our products handle and why.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="what-we-do">
+            <div class="wrap">
+                <h2 class="section-title">What we do</h2>
+                <p class="section-lead">We take a product from idea to the App Store and Google Play: the app, the servers, the data feeds and the privacy and security work in between.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Mobile apps</h3>
+                        <p>Native iPhone and Android apps, built for everyday use and for the moments when an app has to work immediately, such as a safety alert or a family check-in.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Cloud and real-time services</h3>
+                        <p>Secure back-end services that move information quickly: live data feeds, push notifications to many devices at once, and location-aware logic that only sends what is relevant.</p>
+                    </div>
+                    <div class="card">
+                        <h3>On-device intelligence</h3>
+                        <p>Where it makes sense, machine learning runs on the phone itself, so sensitive data such as photos stays with the person who owns it instead of travelling to a server.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Privacy and security by design</h3>
+                        <p>Encrypted connections, device verification of requests, minimal data collection and plain-language policies. We say what is private and what is not, and we do not sell personal information.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="wrap">
+                <h2 class="section-title">Our product</h2>
+                <p class="section-lead">Our first product is live on iPhone and Android.</p>
+                <div class="product">
+                    <img src="app-icon.png" alt="Spotter app icon">
+                    <div>
+                        <h3>Spotter</h3>
+                        <p>Real-time safety alerts from official emergency channels and your community, private family location sharing with one-tap alerts, and on-device face matching against public watchlists. Free to start, with an optional Spotter Plus subscription.</p>
+                        <a href="/" class="btn btn-primary">Visit Spotter</a>
+                        <a href="https://apps.apple.com/au/app/spotterapp/id6755062103" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="margin-left: 8px;">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=spotter.anilsharmame.github.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="margin-left: 8px;">Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partnerships">
+            <div class="wrap">
+                <h2 class="section-title">Partnerships and enquiries</h2>
+                <p class="section-lead">We are open to working with organisations that share the aim of keeping people safer and better informed.</p>
+                <ul class="plain">
+                    <li>Emergency, council and public-safety data providers</li>
+                    <li>Community, neighbourhood and family-safety organisations</li>
+                    <li>Media and press enquiries</li>
+                    <li>Technology and integration partners</li>
+                </ul>
+                <a href="mailto:partnerships@spotterapp.com.au" class="btn btn-primary">partnerships@spotterapp.com.au</a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 16px;">App support and questions about your data are handled through the same address: mention your Spotter user ID (shown on the Profile screen) for data requests.</p>
+            </div>
+        </section>
+
+        <section id="company">
+            <div class="wrap">
+                <h2 class="section-title">Company details</h2>
+                <dl class="facts">
+                    <dt>Legal name</dt><dd>Mynetra Pty Ltd</dd>
+                    <dt>ACN</dt><dd>678 559 736</dd>
+                    <dt>Country</dt><dd>Australia</dd>
+                    <dt>Business</dt><dd>Software and technology: mobile apps and cloud services</dd>
+                    <dt>Contact</dt><dd><a href="mailto:partnerships@spotterapp.com.au">partnerships@spotterapp.com.au</a></dd>
+                    <dt>Legal</dt><dd><a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a></dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mynetra Pty Ltd (ACN 678 559 736). All rights reserved.</p>
+        <div>
+            <a href="/">Spotter</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
