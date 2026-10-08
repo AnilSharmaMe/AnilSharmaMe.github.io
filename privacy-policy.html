@@ -39,81 +39,103 @@
 
 <header>
     <h1>Privacy Policy</h1>
-    <p>Effective Date: December 14, 2025</p>
+    <p>Effective Date: October 8, 2026</p>
 </header>
 
 <section>
     <h2>Introduction</h2>
     <p>
         Spotter App (“we”, “our”, or “us”) values your privacy and is committed to protecting your information.
-        This Privacy Policy explains how we collect, use, store, and safeguard information when you use the Spotter mobile application.
+        This Privacy Policy explains what we collect, how we use and share it, how long we keep it, and the choices you have
+        when you use the Spotter mobile application on iPhone and Android. We handle personal information in line with the
+        Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles.
     </p>
 </section>
 
 <section>
     <h2>Information We Collect</h2>
+    <p>You do not need to give us your name, email address or phone number to use Spotter. We collect:</p>
     <ul>
-        <li><strong>Account & Device Information:</strong> App-specific identifiers and device information required for functionality.</li>
-        <li><strong>Location Data:</strong> Location data used to provide alerts and mapping features.</li>
-        <li><strong>Media:</strong> Images that you voluntarily upload, capture, receive, or choose to save within the app.</li>
-        <li><strong>Usage Data:</strong> Diagnostic and performance data such as feature usage and crash logs.</li>
+        <li><strong>Identifiers:</strong> a random user ID created on your device, an automatically generated username (which you can change),
+            and device security identifiers (Apple App Attest or Google Play Integrity) that let our servers confirm requests come from the genuine app.
+            We also keep your push-notification token (Apple or Google) so we can send you alerts.</li>
+        <li><strong>Location:</strong> your device’s location. When you allow it, the app uploads your last known location and the time it was updated to our servers,
+            including periodically in the background if you allow “Always” location access. We use it to work out which alerts are near you and, if you use Family Safety,
+            to share your location with the people you approve.</li>
+        <li><strong>Reports and media:</strong> incident reports you submit (type, notes, location, and an optional photo), comments, and “thanks” you send.
+            Photos you attach to a report are uploaded to our cloud storage provider.</li>
+        <li><strong>Family Safety:</strong> your connections and invitations, and the location you share with approved family members (see below).</li>
+        <li><strong>Settings and subscription:</strong> your notification preferences (alert types and radius) and whether you have Spotter Plus.
+            Purchases are handled by Apple or Google; we do not receive your payment card details.</li>
+        <li><strong>Technical logs:</strong> our servers keep operational logs (such as request times and errors) to run and secure the service.
+            We do not use third-party advertising or analytics tools in the app.</li>
     </ul>
+</section>
+
+<section>
+    <h2>How We Use Your Information</h2>
+    <ul>
+        <li>To send you safety alerts near your location and the notifications you have turned on</li>
+        <li>To show community reports and alerts to people nearby</li>
+        <li>To provide Family Safety location sharing between people who have approved each other</li>
+        <li>To provide and verify Spotter Plus</li>
+        <li>To protect the service from abuse and misuse (for example, device verification and a reliability score for reports)</li>
+        <li>To respond to your questions and requests</li>
+    </ul>
+    <p>We do not use your information for advertising, we do not track you across other apps or websites, and we do not sell your information.</p>
 </section>
 
 <section>
     <h2>Face Data & Biometric Information</h2>
 
-    <h3>What Face Data Is Collected</h3>
+    <h3>Faces you save or compare on your device</h3>
     <p>
-        Spotter processes face data only when you explicitly choose to save a face or when a received alert image
-        is processed for comparison. This may include:
+        Spotter processes face data when you choose to save a face, take or select a photo to compare, or when a received alert image is compared.
+        All face detection, alignment and numerical “embedding” generation for these happens on your phone. This may include:
     </p>
     <ul>
-        <li>Cropped face images derived from user-selected or alert images</li>
+        <li>Cropped face images derived from images you select, capture or receive</li>
         <li>Numerical face embeddings (mathematical vector representations)</li>
     </ul>
-
     <p>
-        The app does <strong>not</strong> collect names, real-world identities, biometric identifiers linked to a person,
-        or government-issued identification.
+        Your saved faces, and the embeddings made from them, stay on your device and are never uploaded to our servers or sent to other users.
+        The app does <strong>not</strong> collect names, real-world identities, or government-issued identification for the people in those images.
     </p>
 
-    <h3>How Face Data Is Used</h3>
+    <h3>Comparison with public wanted and missing person records</h3>
     <p>
-        Face data is used solely to provide core app functionality, including:
+        Face Search compares a photo against images that police and Crime Stoppers organisations have publicly released for wanted and missing persons.
+        We copy those public images, and the embeddings calculated from them, to our servers so the app can download them. This is public information about
+        the people those agencies have published, not information about Spotter users. Matches are only suggestions and must never be treated as confirmation of someone’s identity.
     </p>
+
+    <h3>Face images in alerts</h3>
+    <p>
+        If you choose to submit an image in an incident report or a face alert, the image (not an embedding) is uploaded and shared with nearby users, together with
+        the location and a similarity score. Please only share images when it is lawful and appropriate to do so.
+    </p>
+
+    <h3>How face data is used</h3>
     <ul>
-        <li>Allowing users to maintain a private face vault on their own device</li>
-        <li>Performing on-device face similarity comparisons</li>
-        <li>Displaying saved face images to the user</li>
-        <li>Allowing users to manage or delete saved faces</li>
+        <li>Allowing you to keep a private face vault on your own device</li>
+        <li>Performing face similarity comparisons on your device</li>
+        <li>Displaying saved face images to you, and letting you delete them</li>
     </ul>
-
     <p>
         Face data is <strong>not</strong> used for advertising, analytics, profiling, tracking, or identity verification.
-    </p>
-
-    <h3>On-Device Processing</h3>
-    <p>
-        All face detection, alignment, and embedding generation occurs entirely on the user’s iPhone.
-        Facial embeddings are never uploaded to servers or processed in the cloud.
     </p>
 </section>
 
 <section>
     <h2>User-to-User Image Sharing</h2>
     <p>
-        The app allows users to share incident or alert images with other users through notifications.
-        These shared images may contain faces.
+        The app allows users to share incident or alert images with other users through notifications. These shared images may contain faces.
     </p>
     <ul>
-        <li>Shared images are delivered to other users’ devices as alerts</li>
-        <li>If a recipient chooses to save a face, all face processing occurs locally on their own device</li>
-        <li>Facial embeddings are never transmitted between users</li>
+        <li>Shared images are delivered to nearby users’ devices as alerts</li>
+        <li>If a recipient chooses to save a face, all face processing for that happens locally on their own device</li>
+        <li>Face embeddings are never sent between users</li>
     </ul>
-    <p>
-        Spotter does not maintain a shared or centralized facial recognition database.
-    </p>
 </section>
 
 <section>
@@ -139,44 +161,62 @@
 </section>
 
 <section>
-    <h2>Data Storage & Retention</h2>
+    <h2>Public Information in the App</h2>
     <p>
-        Face images and face embeddings are stored locally within the app’s secure, sandboxed storage on your device.
+        Some alerts come from public sources rather than from users, including official emergency services feeds
+        (such as VicEmergency, the NSW Rural Fire Service and the Queensland Fire Department), police stolen-vehicle information
+        and publicly listed stolen-vehicle sources, and police and Crime Stoppers wanted and missing person notices. This information is
+        not about you; we show it to help keep communities informed and credit its source where required.
     </p>
-    <ul>
-        <li>Face data is retained only for as long as you choose to keep it</li>
-        <li>You may delete individual faces or all face data at any time within the app</li>
-        <li>Deleting the app permanently removes all stored face data</li>
-    </ul>
 </section>
 
 <section>
-    <h2>Data Sharing & Disclosure</h2>
+    <h2>Who We Share Information With</h2>
+    <p>We do not sell or rent your personal information. We share it only as follows:</p>
+    <ul>
+        <li><strong>Other users:</strong> the reports and images you choose to submit are shown to nearby users, and your location is shown to family members you approve.</li>
+        <li><strong>Service providers that run Spotter for us:</strong> Apple (push notifications, device verification, maps and subscriptions), Google (Firebase for notifications and file storage,
+            and Google Play services, billing and maps on Android) and our server hosting provider. They process information only to provide their service to us.</li>
+        <li><strong>Where the law requires it,</strong> or to protect legal rights and the safety of people.</li>
+    </ul>
     <p>
-        Spotter does not sell, rent, or share face data with third parties.
+        Some of these providers store or process information outside Australia. By using Spotter you understand that information may be handled overseas by these providers;
+        we take reasonable steps to make sure they protect it.
     </p>
-    <p>
-        Facial embeddings are never transmitted to external servers and are not accessible to third-party service providers.
-        Information may be disclosed only if required by law or to protect legal rights.
-    </p>
+</section>
+
+<section>
+    <h2>Data Storage, Retention & Deletion</h2>
+    <ul>
+        <li><strong>On your device:</strong> face images and embeddings you save are stored in the app’s sandboxed storage and kept only as long as you choose.
+            You can delete individual faces or all face data in the app, and deleting the app removes them from your device.</li>
+        <li><strong>On our servers:</strong> your device record (identifiers, push token, notification settings and last known location), your reports and your Family Safety
+            connections are kept while you use Spotter. Deleting the app does <strong>not</strong> by itself remove them from our servers.</li>
+        <li><strong>Reports and alerts:</strong> older community reports and alerts are removed automatically as newer ones are stored.</li>
+        <li><strong>Deleting your data:</strong> email <a href="mailto:admin@spotterapp.com.au">admin@spotterapp.com.au</a> and include your user ID
+            (shown on your Profile screen). We will delete the information we hold against that user ID, including your device record, location and Family Safety connections,
+            within 30 days. We may keep limited records if we are required to by law.</li>
+    </ul>
 </section>
 
 <section>
     <h2>Security of Your Information</h2>
     <p>
-        We apply reasonable technical and organizational safeguards to protect your information.
-        All locally stored data benefits from iOS system-level encryption and sandboxing.
-        No system can be guaranteed to be completely secure.
+        We apply reasonable technical and organizational safeguards to protect your information, including encrypted (TLS) connections,
+        device verification of requests to our servers, and access controls. Information stored on your device benefits from iOS or Android
+        system-level encryption and sandboxing. No system can be guaranteed to be completely secure.
     </p>
 </section>
 
 <section>
     <h2>Your Rights & Choices</h2>
     <ul>
-        <li>Access, review, or delete your information within the app</li>
-        <li>Delete saved face data at any time</li>
-        <li>Uninstall the app to permanently remove all stored data</li>
-        <li>Contact us with privacy-related questions</li>
+        <li>Turn off location access, background location or notifications at any time in your phone’s settings, and choose which alert types you receive in the app</li>
+        <li>Pause location sharing, share only an approximate location, or remove a family connection at any time</li>
+        <li>Delete saved face data on your device at any time</li>
+        <li>Ask us for access to, correction of, or deletion of the information we hold about you by contacting us (see above)</li>
+        <li>If you are unhappy with how we have handled your information, contact us first. If we cannot resolve it, you can complain to the
+            Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au">oaic.gov.au</a></li>
     </ul>
 </section>
 
@@ -192,7 +232,7 @@
     <h2>Changes to This Privacy Policy</h2>
     <p>
         We may update this Privacy Policy periodically.
-        Updates will be posted with a revised effective date.
+        Updates will be posted here with a revised effective date.
         Continued use of the app indicates acceptance of the updated policy.
     </p>
 </section>
@@ -200,7 +240,7 @@
 <section>
     <h2>Contact Us</h2>
     <p>
-        If you have questions about this Privacy Policy or our data practices, contact us at
+        If you have questions about this Privacy Policy or our data practices, or want to make a request about your information, contact us at
         <a href="mailto:admin@spotterapp.com.au">admin@spotterapp.com.au</a>.
     </p>
 </section>
