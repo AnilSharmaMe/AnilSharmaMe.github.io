@@ -314,6 +314,7 @@
             background: #F2F2F7;
             color: #1C1C1E;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            text-align: left; /* the hero centres its text on phones; the app screen must not */
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -330,77 +331,175 @@
 
         .lf-dots { letter-spacing: 1px; font-size: 0.55rem; }
 
-        .lf-app-title {
-            font-size: 1.5rem;
+        /* Header: app mark + name on the left, suburb chip on the right (like the real Home screen). */
+        .lf-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px 8px;
+        }
+
+        .lf-brand { display: flex; align-items: center; gap: 7px; }
+
+        .lf-logo {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: #1E7BFF;
+            color: #fff;
+            font-size: 0.7rem;
             font-weight: 800;
-            padding: 6px 18px 10px;
-            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lf-app-title { font-size: 1.05rem; font-weight: 800; color: #000; }
+
+        .lf-chip {
+            font-size: 0.56rem;
+            font-weight: 600;
+            padding: 4px 9px;
+            border-radius: 100px;
+            background: rgba(0,0,0,0.06);
+            color: #6B7280;
         }
 
         .lf-send-alert {
-            margin: 0 16px 14px;
-            padding: 14px 16px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #FF9A3D, #FF3B30);
+            margin: 0 14px 8px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: #D92B26;
             display: flex;
             align-items: center;
-            gap: 12px;
-            box-shadow: 0 8px 16px rgba(255, 59, 48, 0.25);
+            gap: 10px;
+            box-shadow: 0 6px 12px rgba(217, 43, 38, 0.25);
         }
 
-        .lf-send-alert-icon { font-size: 1.3rem; }
+        .lf-send-alert-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
         .lf-send-alert-text { flex: 1; }
-        .lf-send-alert-title { color: #fff; font-weight: 700; font-size: 0.85rem; }
-        .lf-send-alert-sub { color: rgba(255,255,255,0.9); font-size: 0.65rem; }
-        .lf-chevron { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+        .lf-send-alert-title { color: #fff; font-weight: 700; font-size: 0.78rem; }
+        .lf-send-alert-sub { color: rgba(255,255,255,0.9); font-size: 0.58rem; }
+        .lf-chevron { color: rgba(255,255,255,0.8); font-size: 1rem; }
+
+        .lf-insights {
+            margin: 0 14px 10px;
+            padding: 8px 12px;
+            border-radius: 14px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .lf-insights-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(10,132,255,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+        .lf-insights-text { flex: 1; }
+        .lf-insights-title { font-weight: 700; font-size: 0.7rem; color: #000; }
+        .lf-insights-sub { font-size: 0.54rem; color: #8E8E93; }
+        .lf-insights .lf-chevron { color: #C7C7CC; }
 
         .lf-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            padding: 0 18px 8px;
+            padding: 0 16px 6px;
         }
 
-        .lf-section-title { font-size: 1rem; font-weight: 700; color: #000; }
-        .lf-see-all { font-size: 0.7rem; color: var(--primary); font-weight: 600; }
+        .lf-section-title { font-size: 0.95rem; font-weight: 800; color: #000; }
+        .lf-see-all { font-size: 0.66rem; color: var(--primary); font-weight: 600; }
 
-        .lf-tabs {
+        .lf-seg {
             display: flex;
-            gap: 6px;
-            padding: 0 16px 10px;
+            margin: 0 14px 8px;
+            padding: 2px;
+            border-radius: 9px;
+            background: rgba(118,118,128,0.12);
         }
-
-        .lf-tab {
-            font-size: 0.62rem;
+        .lf-seg span {
+            flex: 1;
+            text-align: center;
+            font-size: 0.58rem;
             font-weight: 600;
-            padding: 5px 10px;
-            border-radius: 100px;
-            background: rgba(0,0,0,0.05);
-            color: #6B7280;
+            padding: 4px 0;
+            border-radius: 7px;
+            color: #1C1C1E;
         }
+        .lf-seg .lf-seg-active { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
 
-        .lf-tab-active { background: #fff; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+        .lf-tiles {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 14px 8px;
+        }
+        .lf-tile { width: 19%; text-align: center; font-size: 0.48rem; color: #6B7280; }
+        .lf-tile-icon {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            margin: 0 auto 2px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+        .lf-tile-count {
+            position: absolute;
+            top: -3px;
+            right: -4px;
+            min-width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+            color: #1C1C1E;
+            font-size: 0.45rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lf-tile-active .lf-tile-icon { box-shadow: 0 0 0 2px #1E7BFF; }
+        .lf-tile-active { color: #000; font-weight: 700; }
 
         .lf-cards {
             flex: 1;
             padding: 0 14px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             overflow: hidden;
         }
 
         .lf-card {
             background: #fff;
             border-radius: 14px;
-            padding: 12px 14px;
+            padding: 10px 12px;
             display: flex;
-            gap: 10px;
+            gap: 9px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.06);
             opacity: 0;
             transform: translateY(-14px);
             transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.4s ease, margin 0.4s ease, padding 0.4s ease;
-            max-height: 120px;
+            max-height: 130px;
             flex-shrink: 0;
         }
 
@@ -416,13 +515,13 @@
         }
 
         .lf-card-icon {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             flex-shrink: 0;
         }
 
@@ -435,31 +534,36 @@
             gap: 8px;
         }
 
-        .lf-card-title { font-size: 0.72rem; font-weight: 700; }
-        .lf-card-time { font-size: 0.6rem; color: #9CA3AF; white-space: nowrap; }
+        .lf-card-title { font-size: 0.7rem; font-weight: 700; }
+        .lf-card-time { font-size: 0.55rem; color: #9CA3AF; white-space: nowrap; }
 
-        .lf-card-tag {
-            display: inline-block;
-            font-size: 0.55rem;
+        .lf-card-headline { font-size: 0.62rem; font-weight: 600; color: #000; margin-top: 1px; }
+
+        .lf-card-meta { display: flex; align-items: center; gap: 5px; margin-top: 3px; flex-wrap: wrap; }
+        .lf-pill {
+            font-size: 0.5rem;
             font-weight: 700;
-            padding: 2px 7px;
-            border-radius: 6px;
-            background: rgba(64, 114, 218, 0.1);
-            color: var(--primary);
-            margin: 3px 0 4px;
+            padding: 2px 6px;
+            border-radius: 100px;
         }
+        .lf-pill-red { background: rgba(255,59,48,0.12); color: #FF3B30; }
+        .lf-pill-orange { background: rgba(255,149,0,0.14); color: #E08600; }
+        .lf-pill-blue { background: rgba(10,132,255,0.1); color: #0A84FF; }
+        .lf-dist { font-size: 0.54rem; color: #8E8E93; }
 
         .lf-card-snippet {
-            font-size: 0.62rem;
-            color: #4B5563;
-            line-height: 1.4;
+            font-size: 0.56rem;
+            color: #6B7280;
+            line-height: 1.35;
+            margin-top: 3px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .lf-card-likes { font-size: 0.6rem; color: var(--primary); font-weight: 600; margin-top: 4px; }
+        .lf-card-family { font-size: 0.56rem; color: #00B3BF; font-weight: 700; margin-top: 3px; }
+        .lf-card-likes { font-size: 0.56rem; color: var(--primary); font-weight: 600; margin-top: 3px; }
 
         .lf-caption {
             text-align: center;
@@ -815,12 +919,26 @@
                                 <span class="lf-time">9:41</span>
                                 <span class="lf-dots">●●●</span>
                             </div>
-                            <div class="lf-app-title">Spotter</div>
+                            <div class="lf-header">
+                                <div class="lf-brand">
+                                    <div class="lf-logo">✓</div>
+                                    <div class="lf-app-title">Spotter</div>
+                                </div>
+                                <div class="lf-chip">➤ Melton</div>
+                            </div>
                             <div class="lf-send-alert">
                                 <div class="lf-send-alert-icon">⚠️</div>
                                 <div class="lf-send-alert-text">
-                                    <div class="lf-send-alert-title">Send Alert</div>
+                                    <div class="lf-send-alert-title">Send alert</div>
                                     <div class="lf-send-alert-sub">Notify your network instantly</div>
+                                </div>
+                                <div class="lf-chevron">›</div>
+                            </div>
+                            <div class="lf-insights">
+                                <div class="lf-insights-icon">📊</div>
+                                <div class="lf-insights-text">
+                                    <div class="lf-insights-title">Area Insights</div>
+                                    <div class="lf-insights-sub">See where incidents cluster near you</div>
                                 </div>
                                 <div class="lf-chevron">›</div>
                             </div>
@@ -828,10 +946,16 @@
                                 <span class="lf-section-title">Live Activity</span>
                                 <span class="lf-see-all">See All</span>
                             </div>
-                            <div class="lf-tabs">
-                                <span class="lf-tab lf-tab-active">All</span>
-                                <span class="lf-tab">Emergencies</span>
-                                <span class="lf-tab">Stolen Cars</span>
+                            <div class="lf-seg">
+                                <span>Nearby</span>
+                                <span class="lf-seg-active">Everywhere</span>
+                            </div>
+                            <div class="lf-tiles">
+                                <div class="lf-tile lf-tile-active"><div class="lf-tile-icon" style="background: rgba(30,123,255,0.18);">▦<span class="lf-tile-count">4</span></div>All</div>
+                                <div class="lf-tile"><div class="lf-tile-icon" style="background: rgba(255,59,48,0.12);">🔥<span class="lf-tile-count">1</span></div>Fire</div>
+                                <div class="lf-tile"><div class="lf-tile-icon" style="background: rgba(255,149,0,0.14);">🚗<span class="lf-tile-count">1</span></div>Accidents</div>
+                                <div class="lf-tile"><div class="lf-tile-icon" style="background: rgba(88,86,214,0.14);">🚙<span class="lf-tile-count">1</span></div>Vehicles</div>
+                                <div class="lf-tile"><div class="lf-tile-icon" style="background: rgba(0,179,191,0.14);">👥<span class="lf-tile-count">1</span></div>Community</div>
                             </div>
                             <div class="lf-cards" id="lfCards"></div>
                         </div>
@@ -1147,33 +1271,44 @@
             var feed = document.getElementById('lfCards');
             if (!feed) return;
 
+            // Sample alerts only. They follow the real cards: a coloured type, a headline, a status pill and distance for
+            // official alerts, and (when family are close) a teal line saying how far each person is.
             var sampleAlerts = [
-                { icon: '🔥', bg: 'rgba(255,59,48,0.12)', title: 'Safety Alert: Fire', tag: 'Official Feed', snippet: 'Small kitchen fire reported, contained before crews arrived.', likes: 14 },
-                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', title: 'Stolen Vehicle Alert', tag: 'Official Feed', snippet: 'White Toyota HiLux reported stolen from Fitzroy Street car park overnight.', likes: 9 },
-                { icon: '👁️', bg: 'rgba(64,114,218,0.12)', title: 'Suspicious Activity', tag: 'Community', snippet: 'Unknown male checking car door handles along Church Street, moved on before police arrived.', likes: 6 },
-                { icon: '⚠️', bg: 'rgba(255,59,48,0.12)', title: 'Safety Alert: Bushfire', tag: 'Official Feed', snippet: 'Oxford Street | Status: UNCONTROLLED. Crews responding.', likes: 12 },
-                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', title: 'Stolen Vehicle Alert', tag: 'Official Feed', snippet: 'Vehicle reported stolen from Richmond car park overnight.', likes: 15 },
-                { icon: '👁️', bg: 'rgba(64,114,218,0.12)', title: 'Suspicious Activity', tag: 'Community', snippet: 'Group loitering near the Collins Street car park after hours.', likes: 4 }
+                { icon: '🔥', bg: 'rgba(255,59,48,0.12)', color: '#FF3B30', title: 'Fire', headline: 'Bushfire · Exford Rd, Melton South', pill: ['Not under control', 'red'], dist: '2.3 km away', family: 'Mum is 450 m and Dad 6.1 km from this' },
+                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', color: '#FF9500', title: 'Accident / Rescue', headline: 'Road Accident · Melton Hwy, Melton', dist: '2.1 km away', family: 'Dad is 2.4 km and Mum 3.3 km from this' },
+                { icon: '🚙', bg: 'rgba(255,149,0,0.14)', color: '#FF9500', title: 'Stolen Vehicle Alert', pill: ['Official Feed', 'blue'], snippet: 'White Toyota HiLux reported stolen from Fitzroy Street car park overnight.', dist: '12 km away', likes: 9 },
+                { icon: '⚠️', bg: 'rgba(255,149,0,0.14)', color: '#FF9500', title: 'Suspicious Activity', pill: ['User', 'blue'], snippet: 'Unknown male checking car door handles along Church Street, moved on before police arrived.', dist: '7.2 km away', likes: 6 },
+                { icon: '🔥', bg: 'rgba(255,59,48,0.12)', color: '#FF3B30', title: 'Fire', headline: 'Grass fire · Tarneit Rd, Tarneit', pill: ['Being controlled', 'orange'], dist: '4.6 km away', family: 'Sam is 1.8 km from this' },
+                { icon: '🚗', bg: 'rgba(255,149,0,0.14)', color: '#FF9500', title: 'Accident / Rescue', headline: 'Road Accident · Princes Fwy, Werribee', dist: '9.4 km away' }
             ];
 
             var timeStages = ['Just now', '1 min ago', '2 min ago', '4 min ago', '7 min ago', '12 min ago'];
-            var maxVisible = 4;
+            var maxVisible = 3;
             var nextIndex = 0;
             var liveCards = []; // { el, stage }
 
             function renderCard(alert) {
                 var card = document.createElement('div');
                 card.className = 'lf-card';
+                var meta = '';
+                if (alert.pill || alert.dist) {
+                    meta = '<div class="lf-card-meta">' +
+                        (alert.pill ? '<span class="lf-pill lf-pill-' + alert.pill[1] + '">' + alert.pill[0] + '</span>' : '') +
+                        (alert.dist ? '<span class="lf-dist">' + alert.dist + '</span>' : '') +
+                    '</div>';
+                }
                 card.innerHTML =
                     '<div class="lf-card-icon" style="background:' + alert.bg + '">' + alert.icon + '</div>' +
                     '<div class="lf-card-body">' +
                         '<div class="lf-card-top">' +
-                            '<span class="lf-card-title">' + alert.title + '</span>' +
+                            '<span class="lf-card-title" style="color:' + alert.color + '">' + alert.title + '</span>' +
                             '<span class="lf-card-time">Just now</span>' +
                         '</div>' +
-                        '<span class="lf-card-tag">' + alert.tag + '</span>' +
-                        '<div class="lf-card-snippet">' + alert.snippet + '</div>' +
-                        '<div class="lf-card-likes">👍 ' + alert.likes + '</div>' +
+                        (alert.headline ? '<div class="lf-card-headline">' + alert.headline + '</div>' : '') +
+                        (alert.snippet ? '<div class="lf-card-snippet">' + alert.snippet + '</div>' : '') +
+                        meta +
+                        (alert.family ? '<div class="lf-card-family">👥 ' + alert.family + '</div>' : '') +
+                        (alert.likes ? '<div class="lf-card-likes">👍 ' + alert.likes + '</div>' : '') +
                     '</div>';
                 return card;
             }
