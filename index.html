@@ -988,7 +988,7 @@
     <section id="demo" class="demo-section">
         <div class="section-header" style="margin-bottom: 48px;">
             <h2 class="gradient-text">See Spotter in action.</h2>
-            <p>A one-minute tour of the app, from live alerts to your family's safety.</p>
+            <p>A short tour of the app, from live alerts to keeping your family safe.</p>
         </div>
         <div class="demo-wrap">
             <div class="demo-device">
@@ -998,17 +998,16 @@
                 </video>
             </div>
             <div class="demo-side">
-                <h3>Everything in one walkthrough</h3>
-                <p>Tap a topic to jump straight to it: warnings before you arrive somewhere unfamiliar, live alerts by type, a heatmap of nearby incidents, private family location sharing, and more.</p>
+                <h3>Your people, in one walkthrough</h3>
+                <p>Tap a topic to jump straight to it: live alerts with your family's distance on them, finding out when someone you love is near an incident, one-tap messages, Home and School arrivals, and naming your people.</p>
                 <div class="demo-chapters" id="demoChapters">
-                    <button class="demo-chapter" data-t="0">Risk Radar<span>0:00</span></button>
-                    <button class="demo-chapter" data-t="6">Live alerts<span>0:06</span></button>
-                    <button class="demo-chapter" data-t="15">Alert details<span>0:15</span></button>
-                    <button class="demo-chapter" data-t="21">Send an alert<span>0:21</span></button>
-                    <button class="demo-chapter" data-t="28">Area Insights<span>0:28</span></button>
-                    <button class="demo-chapter" data-t="42">Family<span>0:42</span></button>
-                    <button class="demo-chapter" data-t="53">Spot<span>0:53</span></button>
-                    <button class="demo-chapter" data-t="63">Settings<span>1:03</span></button>
+                    <button class="demo-chapter" data-t="0">Live alerts<span>0:00</span></button>
+                    <button class="demo-chapter" data-t="7">Family near an incident<span>0:07</span></button>
+                    <button class="demo-chapter" data-t="13">Ask “Are you OK?”<span>0:13</span></button>
+                    <button class="demo-chapter" data-t="21">Your people<span>0:21</span></button>
+                    <button class="demo-chapter" data-t="24">Quick messages<span>0:24</span></button>
+                    <button class="demo-chapter" data-t="27">Home and School<span>0:27</span></button>
+                    <button class="demo-chapter" data-t="31">Name your people<span>0:31</span></button>
                 </div>
                 <p class="demo-note">Shown on iPhone with sample data for illustration.</p>
             </div>
@@ -1046,10 +1045,10 @@
             <div class="bento-card span-2">
                 <div>
                     <h3>Spot Flares</h3>
-                    <p>Alert your community instantly about local hazards and incidents. Drop a flare, and notify everyone nearby in milliseconds.</p>
+                    <p>Alert your community instantly about local hazards and incidents. Drop a flare, and notify everyone nearby in milliseconds. The live feed shows how far each alert is from the people you care about.</p>
                 </div>
                 <div class="card-visual">
-                    <img src="screenshot-home.png" alt="Spotter home screen with live official alerts, filters and family distances">
+                    <img src="screenshot-alert-card.png" alt="A live fire alert in Spotter with 'Mum is 450 m from this' under it">
                 </div>
             </div>
 
@@ -1068,10 +1067,21 @@
             <div class="bento-card span-2-row">
                 <div>
                     <h3>Family Map</h3>
-                    <p>Keep track of your loved ones on a private map — invites require approval on both sides. Pause sharing anytime, or share an approximate, suburb-level location instead of your exact position.</p>
+                    <p>Keep track of your loved ones on a private map, and call them what you call them: Mum, Dad, Sam. Invites need approval on both sides. Pause sharing anytime, or share an approximate, suburb-level location instead of your exact position.</p>
                 </div>
                 <div class="card-visual" style="height: 70%;">
-                    <img src="screenshot-family.png" alt="Family Map UI" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
+                    <img src="screenshot-family.png" alt="Family page with a map, and Mum, Dad and Sister with how recent and how far each person is" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
+                </div>
+            </div>
+
+            <!-- Card: Family near an incident -->
+            <div class="bento-card span-2-row">
+                <div>
+                    <h3>Know When Family Is Near an Alert <span class="badge" style="padding: 4px 12px; font-size: 0.7rem; margin-bottom: 0; vertical-align: middle;">NEW</span></h3>
+                    <p>If someone you love is within 1 km of a fire or accident, Spotter tells you, with their distance, and you can ask “Are you OK?” in one tap. Only when their location is recent and shared with you, never a guess.</p>
+                </div>
+                <div class="card-visual" style="height: 70%;">
+                    <img src="screenshot-family-near.png" alt="Family near an incident screen: Mum is 450 m from a bushfire, with a map of both" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
                 </div>
             </div>
 
@@ -1082,7 +1092,29 @@
                     <p>Send an instant alert with a custom message to your family circle when you need help — no fumbling through menus in an urgent moment.</p>
                 </div>
                 <div class="card-visual" style="height: 70%;">
-                    <img src="screenshot-safetyalert.png" alt="Family Safety screen with the red Trigger Safety Alert button" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
+                    <img src="screenshot-safetyalert.png" alt="Alert my family sheet with quick messages like I need help and Please check on me" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
+                </div>
+            </div>
+
+            <!-- Card: Saved places -->
+            <div class="bento-card span-2-row">
+                <div>
+                    <h3>Home, School, Work <span class="badge" style="padding: 4px 12px; font-size: 0.7rem; margin-bottom: 0; vertical-align: middle;">NEW</span></h3>
+                    <p>Save the places that matter and your family is told when you arrive or leave, with a recent-activity list to look back at. Only the people you choose, and nothing while sharing is paused.</p>
+                </div>
+                <div class="card-visual" style="height: 70%;">
+                    <img src="screenshot-places.png" alt="Family page: Mum at School since 8:42, recent activity and saved places" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
+                </div>
+            </div>
+
+            <!-- Card: Names -->
+            <div class="bento-card span-2-row">
+                <div>
+                    <h3>Call Them Mum or Dad <span class="badge" style="padding: 4px 12px; font-size: 0.7rem; margin-bottom: 0; vertical-align: middle;">NEW</span></h3>
+                    <p>Give each person the name you use for them. Only you see it, and notifications use it too: “Mum is 450 m from this.” You choose how your own family sees you as well.</p>
+                </div>
+                <div class="card-visual" style="height: 70%;">
+                    <img src="screenshot-names.png" alt="What do you call this person: one-tap suggestions Mum, Dad, Partner, Son, Daughter" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
                 </div>
             </div>
 
