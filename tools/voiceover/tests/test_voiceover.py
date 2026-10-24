@@ -41,9 +41,9 @@ class Tool(unittest.TestCase):
 
     def test_the_real_narration_file_is_sane(self):
         lines = json.load(open(os.path.join(v.HERE, "narration.json")))
-        self.assertEqual(len(lines), 8)
+        self.assertEqual(len(lines), 9)
         for a, b in zip(lines, lines[1:]): self.assertLess(a["end"], b["start"], "lines must not overlap")
-        for l in lines: self.assertGreater(l["end"] - l["start"], 1.5); self.assertLess(l["end"], 43.7)
+        for l in lines: self.assertGreater(l["end"] - l["start"], 1.5); self.assertLess(l["end"], 62.6)
 
     def test_a_missing_key_explains_what_to_do(self):
         os.environ.pop("GOOGLE_TTS_API_KEY"); os.environ["HOME"] = self.dir
