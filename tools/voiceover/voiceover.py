@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = os.environ.get("TTS_API_URL", "https://texttospeech.googleapis.com/v1")
 VIDEO = os.path.join(ROOT, "spotter-demo.mp4")
-SAMPLE_VOICES = ["en-AU-Neural2-A", "en-AU-Neural2-C", "en-AU-Neural2-B", "en-AU-Neural2-D"]
+SAMPLE_VOICES = ["en-AU-Chirp3-HD-Aoede", "en-AU-Chirp3-HD-Zephyr", "en-AU-Chirp3-HD-Leda", "en-AU-Chirp3-HD-Puck", "en-AU-Chirp3-HD-Charon", "en-AU-Neural2-C"]   # the Chirp3-HD voices are the liveliest
 MAX_RATE = 1.25   # faster than this sounds rushed: shorten the line instead
 SAMPLE_RATE = 24000
 
