@@ -1,10 +1,9 @@
-[
- {"start": 0.5,  "end": 7.1,  "text": "Meet Spotter! Live alerts, with how close each one is to the people you love."},
- {"start": 8.0,  "end": 13.4, "text": "If someone you love is near a fire or an accident, you'll know."},
- {"start": 14.2, "end": 21.0, "text": "Then check on them with one tap. Are you okay?"},
- {"start": 21.8, "end": 24.1, "text": "Everyone, at a glance."},
- {"start": 24.8, "end": 26.9, "text": "Message them in one tap."},
- {"start": 27.6, "end": 30.9, "text": "See when they arrive at Home or School."},
- {"start": 31.6, "end": 40.2, "text": "Call them what you call them. Mum, Dad, Sam. Only you see it."},
- {"start": 41.0, "end": 43.5, "text": "Spotter. Keep your people safe!"}
-]
+[{"start":0.5,"end":7.0,"text":"Meet Spotter! Live alerts, with how close each one is to the people you love."},
+ {"start":8.0,"end":13.0,"text":"If someone you love is near a fire or an accident, you'll know."},
+ {"start":14.2,"end":21.0,"text":"Then check on them with one tap. Are you okay?"},
+ {"start":21.8,"end":29.0,"text":"Risk Radar watches in the background, and warns you before you enter an area with recent car thefts."},
+ {"start":29.4,"end":34.8,"text":"Your people, at a glance. Message them in one tap."},
+ {"start":35.3,"end":42.0,"text":"Save Home, School or Work, and choose who's told when you arrive."},
+ {"start":42.6,"end":51.5,"text":"So the whole family knows when Sam gets to school. No phone calls needed."},
+ {"start":52.5,"end":59.0,"text":"Call them what you call them. Mum, Dad, Sam. Only you see it."},
+ {"start":59.7,"end":62.3,"text":"Spotter. Keep your people safe!"}]
