@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotter (SpotterApp) | Smart Community Safety</title>
-    <meta name="description" content="Spotter — listed as 'SpotterApp' on the App Store and Google Play — brings real-time safety alerts, private family location sharing with a one-tap SOS, and on-device AI face matching into one app for iOS and Android. Free to start, with an optional Spotter Plus upgrade.">
+    <meta name="description" content="Spotter — listed as 'SpotterApp' on the App Store and Google Play — keeps your people safe: live local alerts that show how close your family is, Risk Radar warnings before you drive into a high-risk area, Home, School and Work arrival notices for the whole family, and a one-tap alert to your circle. For iOS and Android. Free to start, with an optional Spotter Plus upgrade.">
 
     <!-- Open Graph / social share preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://spotterapp.com.au/">
     <meta property="og:title" content="Spotter (SpotterApp) | Smart Community Safety">
-    <meta property="og:description" content="Real-time safety alerts sourced from official channels and your community, private family location sharing with a one-tap SOS, and on-device AI face matching against public watchlists. Free to start on iOS and Android — search 'SpotterApp' to find it.">
+    <meta property="og:description" content="Live alerts from official channels and your community, a Risk Radar that warns you before you enter a high-risk area, and family notices when someone arrives at Home or School. Private, free to start on iOS and Android — search 'SpotterApp' to find it.">
     <meta property="og:image" content="https://spotterapp.com.au/app-icon.png">
 
     <meta name="twitter:card" content="summary">
@@ -679,6 +679,13 @@
         }
         .bento-card:hover::before { opacity: 1; }
 
+        .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .story { cursor: default; display: flex; flex-direction: column; gap: 10px; }
+        .story .story-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
+        .story h3 { margin: 0; }
+        .story p { margin: 0; }
+        .story .story-result { font-size: 0.92rem; color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: 10px; margin-top: auto; }
+        .stories-note { max-width: 800px; margin: 24px auto 0; text-align: center; font-size: 0.85rem; color: var(--text-secondary); }
         .bento-card h3 {
             font-size: 1.5rem;
             margin-bottom: 12px;
@@ -885,6 +892,7 @@
         <div class="logo"><img src="app-icon.png" alt="Spotter logo" style="width: 32px; height: 32px; border-radius: 22%;">Spotter</div>
         <div class="nav-links">
             <a href="#demo">Demo</a>
+            <a href="#examples">Examples</a>
             <a href="#features">Features</a>
             <a href="#security">Security</a>
             <a href="#faq">FAQ</a>
@@ -902,7 +910,7 @@
             <div class="hero-text">
                 <div class="badge">✓ Free to start · iOS &amp; Android</div>
                 <h1>Smart safety for<br><span class="gradient-text-primary">modern communities.</span></h1>
-                <p>Real-time hazard alerts sourced from official channels and your community, private family location sharing with a one-tap SOS, and on-device AI face matching against public watchlists. Built with privacy as a first principle.</p>
+                <p>Live alerts from official channels and your community, with how close your family is to each one. A Risk Radar that warns you before you drive into an area with recent car thefts or accidents. Home, School and Work notices, so the whole family knows everyone arrived safely. Built with privacy as a first principle.</p>
                 <div class="cta-group">
                     <a href="https://apps.apple.com/au/app/spotterapp/id6755062103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">App Store</a>
                     <a href="https://play.google.com/store/apps/details?id=spotter.anilsharmame.github.com" class="btn btn-primary" style="background: linear-gradient(135deg, #3B82F6, #2563EB);" target="_blank" rel="noopener noreferrer">Google Play</a>
@@ -999,19 +1007,67 @@
             </div>
             <div class="demo-side">
                 <h3>Your people, in one walkthrough</h3>
-                <p>Tap a topic to jump straight to it: live alerts with your family's distance on them, finding out when someone you love is near an incident, one-tap messages, Home and School arrivals, and naming your people.</p>
+                <p>Tap a topic to jump straight to it: live alerts with your family's distance on them, finding out when someone you love is near an incident, Risk Radar warnings before you enter a high-risk area, one-tap messages, saved places that tell your family when you arrive, and naming your people.</p>
                 <div class="demo-chapters" id="demoChapters">
                     <button class="demo-chapter" data-t="0">Live alerts<span>0:00</span></button>
                     <button class="demo-chapter" data-t="7">Family near an incident<span>0:07</span></button>
                     <button class="demo-chapter" data-t="13">Ask “Are you OK?”<span>0:13</span></button>
-                    <button class="demo-chapter" data-t="21">Your people<span>0:21</span></button>
-                    <button class="demo-chapter" data-t="24">Quick messages<span>0:24</span></button>
-                    <button class="demo-chapter" data-t="27">Home and School<span>0:27</span></button>
-                    <button class="demo-chapter" data-t="31">Name your people<span>0:31</span></button>
+                    <button class="demo-chapter" data-t="21">Risk Radar<span>0:21</span></button>
+                    <button class="demo-chapter" data-t="29">Your people<span>0:29</span></button>
+                    <button class="demo-chapter" data-t="32">Quick messages<span>0:32</span></button>
+                    <button class="demo-chapter" data-t="35">Saved places<span>0:35</span></button>
+                    <button class="demo-chapter" data-t="42">Arrival alerts<span>0:42</span></button>
+                    <button class="demo-chapter" data-t="52">Name your people<span>0:52</span></button>
                 </div>
                 <p class="demo-note">Shown on iPhone with sample data for illustration.</p>
             </div>
         </div>
+    </section>
+
+    <section id="examples" class="features" style="padding-top: 60px;">
+        <div class="section-header">
+            <h2 class="gradient-text">Safety in everyday life.</h2>
+            <p>Six ordinary moments where Spotter quietly does its job.</p>
+        </div>
+        <div class="stories-grid">
+            <div class="bento-card story">
+                <span class="story-tag">Risk Radar</span>
+                <h3>Saturday at the market</h3>
+                <p>You drive to a market you have never been to. As you reach the area, your phone buzzes: <em>“High risk detected: 6 car thefts reported nearby, in the last 3 days.”</em></p>
+                <p class="story-result">You park on the busy street instead and take your bag with you. Nothing was said by a stranger, and you never opened the app.</p>
+            </div>
+            <div class="bento-card story">
+                <span class="story-tag">Saved places</span>
+                <h3>Did the kids get to school?</h3>
+                <p>You save Home and School once. At 8:42 every morning your family sees <em>“Anju arrived at School”</em>, and at 3:50 <em>“Anju left School”</em>.</p>
+                <p class="story-result">No “are you there yet?” texts. Whoever is at work knows, and so does Nana, if you chose to tell her.</p>
+            </div>
+            <div class="bento-card story">
+                <span class="story-tag">Family near an alert</span>
+                <h3>A bushfire near Mum</h3>
+                <p>A fire starts near the town where Mum lives. Spotter shows the alert and says <em>“Mum is 450 m from this”</em>.</p>
+                <p class="story-result">One tap asks “Are you OK?”. It only speaks when her location is recent and shared with you, so it never guesses.</p>
+            </div>
+            <div class="bento-card story">
+                <span class="story-tag">Alert my family</span>
+                <h3>Walking home late</h3>
+                <p>The last train was late and the street is dark. You tap one button and your family circle gets a message with your location.</p>
+                <p class="story-result">No menus, no typing. Free for everyone, always.</p>
+            </div>
+            <div class="bento-card story">
+                <span class="story-tag">Names</span>
+                <h3>Mum, Dad, Sam</h3>
+                <p>You call them what you call them. Notifications use your names too: <em>“Dad arrived at Work”</em>, not a username.</p>
+                <p class="story-result">Only you see the names you give, and each person chooses how their own family sees them.</p>
+            </div>
+            <div class="bento-card story">
+                <span class="story-tag">Area Insights</span>
+                <h3>Choosing where to rent</h3>
+                <p>You are choosing between two suburbs. The heat map shows where car thefts and other incidents have clustered over the last months.</p>
+                <p class="story-result">You see the pattern instead of one alert. Locations are approximate, never an exact pin.</p>
+            </div>
+        </div>
+        <p class="stories-note">These are illustrative scenarios showing how each feature behaves, not customer stories. Spotter only mentions where someone is when they have chosen to share it with you.</p>
     </section>
 
     <section id="features" class="features">
@@ -1034,7 +1090,7 @@
                         </span>
                         Risk Radar <span class="badge" style="padding: 4px 12px; font-size: 0.7rem; margin-bottom: 0; vertical-align: middle;">NEW</span>
                     </h3>
-                    <p>Heading into an unfamiliar suburb? Spotter checks it against real incident reports — car thefts, accidents, and more — and warns you in advance if it's a risk area, so you can take precautions before you even arrive. Real community reports, not guesswork.</p>
+                    <p>Spotter keeps watch in the background, comparing the places you travel through with real incident reports: car thefts, accidents, fires and more. If you are about to enter an area where something has been happening, you get a heads-up, even when the app is closed, so you can take precautions before you arrive. Quiet until it matters, and at most one warning per area a week.</p>
                 </div>
                 <div class="card-visual">
                     <img src="screenshot-riskradar-notification.png" alt="Risk Radar proactive alert notification">
@@ -1100,7 +1156,7 @@
             <div class="bento-card span-2-row">
                 <div>
                     <h3>Home, School, Work <span class="badge" style="padding: 4px 12px; font-size: 0.7rem; margin-bottom: 0; vertical-align: middle;">NEW</span></h3>
-                    <p>Save the places that matter and your family is told when you arrive or leave, with a recent-activity list to look back at. Only the people you choose, and nothing while sharing is paused.</p>
+                    <p>Save up to five places that matter, such as Home, School and Work, and your family is told when you arrive or leave: “Anju arrived at School · 8:42 am”. Everyone sees how everyone else is doing without a single phone call. A recent-activity list lets you look back, you choose who is told for each place, and nothing is sent while sharing is paused.</p>
                 </div>
                 <div class="card-visual" style="height: 70%;">
                     <img src="screenshot-places.png" alt="Family page: Mum at School since 8:42, recent activity and saved places" style="width: 90%; border-radius: 12px; border-bottom: 1px solid var(--border-subtle);">
