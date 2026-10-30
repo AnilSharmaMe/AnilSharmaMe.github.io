@@ -1,3 +1,9 @@
 tools/voiceover/samples/
 .DS_Store
 __pycache__/
+# Site build tooling is kept OUT of this public repo: the suburb export names
+# backend tables and the notes format. It lives in the private spotter repo.
+tools/build-location-pages.py
+tools/regions.py
+tools/export-suburb-stats.sql
+tools/stats-to-json.py
