@@ -1,2 +1,3 @@
 tools/voiceover/samples/
 .DS_Store
+__pycache__/
