@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://spotterapp.com.au/">
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Melbourne, Victoria, Australia">
     <title>Spotter (SpotterApp) | Smart Community Safety</title>
-    <meta name="description" content="Spotter — listed as 'SpotterApp' on the App Store and Google Play — keeps your people safe: live local alerts that show how close your family is, Risk Radar warnings before you drive into a high-risk area, Home, School and Work arrival notices for the whole family, and a one-tap alert to your circle. For iOS and Android. Free to start, with an optional Spotter Plus upgrade.">
+    <meta name="description" content="Spotter is a free community safety app for Victoria, Australia: live VicEmergency alerts near you, Risk Radar warnings, and family safety. iOS and Android.">
 
     <!-- Open Graph / social share preview -->
     <meta property="og:type" content="website">
@@ -21,17 +24,104 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "MobileApplication",
       "name": "Spotter",
       "alternateName": "SpotterApp",
       "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Community safety",
       "operatingSystem": "iOS, Android",
       "url": "https://spotterapp.com.au/",
+      "image": "https://spotterapp.com.au/app-icon.png",
+      "description": "Community safety app for Victoria, Australia. Live VicEmergency incident alerts, a Risk Radar that warns you before you enter a repeat-incident area, family location sharing with arrival notices for Home, School and Work, and on-device face matching against public missing-persons and wanted lists.",
+      "inLanguage": "en-AU",
+      "areaServed": [
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "State", "name": "Victoria" },
+        { "@type": "City", "name": "Melbourne" }
+      ],
+      "featureList": [
+        "Live incident alerts from VicEmergency",
+        "Risk Radar warnings for repeat-incident areas",
+        "Family location sharing and arrival notices",
+        "On-device face matching against public missing-persons lists",
+        "Stolen vehicle register lookups",
+        "Area Insights incident heat maps"
+      ],
+      "screenshot": [
+        "https://spotterapp.com.au/screenshot-alert-card.png",
+        "https://spotterapp.com.au/screenshot-riskradar-notification.png",
+        "https://spotterapp.com.au/screenshot-family.png",
+        "https://spotterapp.com.au/screenshot-insights.png"
+      ],
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "AUD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mynetra Pty Ltd",
+        "url": "https://spotterapp.com.au/mynetra.html",
+        "email": "partnerships@spotterapp.com.au",
+        "address": { "@type": "PostalAddress", "addressCountry": "AU" }
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does a safety app need face search \u2014 isn't that creepy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's not a general \"search anyone\" tool. Face matching only runs against closed, named lists \u2014 public wanted and missing-persons registries, or your own private list \u2014 never a general web or social-media search. Comparison happens entirely on your device; photos are never uploaded anywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can family location sharing be misused for stalking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every connection requires mutual approval \u2014 no one can add you without your consent. You can pause sharing, or switch to an approximate suburb-level location instead of your exact position, at any time. Removing a connection takes effect immediately and isn't announced to the removed person."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data really private? What's actually encrypted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Face data never leaves your device. Family location is transmitted over an encrypted TLS connection and only shared with people you've approved, but it isn't end-to-end encrypted \u2014 our server needs to route it to make live sharing work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why not just use VicEmergency or other official apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You should still use them \u2014 Spotter isn't a replacement for official emergency channels. What Spotter adds is bringing multiple official feeds (VicEmergency, stolen vehicle registers, missing persons) together with family safety tools in one place, instead of checking several separate sources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spotter really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes \u2014 every feature in Spotter is free for everyone: safety alerts, unlimited family members, unlimited face searches, full alert history, Risk Radar and Area Insights. Nothing is ever paywalled mid-emergency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is behind Spotter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spotter is built and operated by Mynetra Pty Ltd (ACN 678 559 736), an Australian software and technology company \u2014 not a government body."
+          }
+        }
+      ]
     }
     </script>
 
@@ -896,6 +986,7 @@
             <a href="#features">Features</a>
             <a href="#security">Security</a>
             <a href="#faq">FAQ</a>
+            <a href="melbourne-safety-app.html">Melbourne</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
@@ -1340,6 +1431,18 @@
             <a href="#about" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">About Spotter</a>
             <a href="#contact" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Contact</a>
             <a href="mailto:partnerships@spotterapp.com.au" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Support</a>
+        </div>
+        <div class="footer-col" style="display: flex; flex-direction: column; gap: 12px;">
+            <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 8px;">Where Spotter works</h4>
+            <a href="melbourne-safety-app.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Melbourne</a>
+            <a href="victoria-emergency-alerts.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Victoria emergency alerts</a>
+            <a href="south-east-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">South East Melbourne</a>
+            <a href="western-suburbs-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Melbourne's Western Suburbs</a>
+            <a href="northern-suburbs-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Melbourne's Northern Suburbs</a>
+            <a href="eastern-suburbs-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Melbourne's Eastern Suburbs</a>
+            <a href="inner-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Inner Melbourne and the CBD</a>
+            <a href="bayside-melbourne-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Bayside and South East Beachside Melbourne</a>
+            <a href="melton-safety.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Melton, VIC</a>
         </div>
         <div class="footer-col" style="display: flex; flex-direction: column; gap: 12px;">
             <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 8px;">Legal</h4>
