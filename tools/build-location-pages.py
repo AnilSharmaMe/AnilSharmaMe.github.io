@@ -175,12 +175,21 @@ VICTORIA_BODY = """        <h2>Where Victoria&rsquo;s official alerts come from<
             text from your phone reaches your family.</li>
         </ul>
 
-        <h2>Coverage across the state</h2>
-        <p>Spotter&rsquo;s official-feed coverage is strongest in Victoria, because Victoria&rsquo;s incident data is the feed we
-        ingest. That includes Greater Melbourne and regional Victoria &mdash; Geelong, Ballarat, Bendigo, the Latrobe Valley,
-        Shepparton, Mildura and the towns between them. Community reports and family features work anywhere in Australia;
-        official incident alerts are Victorian today.</p>
-        <p>We would rather state that plainly than imply national coverage we do not have.</p>
+        <h2>Coverage across the state, and beyond it</h2>
+        <p>Victoria has Spotter&rsquo;s deepest coverage, because VicEmergency publishes the full range of incident types &mdash;
+        structure fires, rescues, hazardous material incidents, flooding and grass fires. That applies across Greater
+        Melbourne and regional Victoria: Geelong, Ballarat, Bendigo, the Latrobe Valley, Shepparton, Mildura and the towns
+        between them.</p>
+        <p>Spotter also imports two other states&rsquo; official feeds, checked every five minutes:</p>
+        <ul>
+            <li><strong>New South Wales</strong> &mdash; major incidents from the
+            <a href="https://www.rfs.nsw.gov.au/fire-information/fires-near-me" target="_blank" rel="noopener noreferrer">NSW Rural Fire Service</a>.</li>
+            <li><strong>Queensland</strong> &mdash; bushfire alerts from the Queensland Fire Department.</li>
+        </ul>
+        <p>Those two are fire-focused feeds, so outside Victoria you get major fire and bushfire warnings rather than the
+        full incident mix. Each alert carries its source agency on the detail screen, as those feeds&rsquo; licences require.
+        Community reports and all the family features work anywhere in Australia.</p>
+        <p>We would rather set that out precisely than claim uniform national coverage.</p>
 
         <h2>Bushfire season</h2>
         <p>Through a Victorian summer the feed gets busy, and distance is what makes it usable. Spotter shows the nearest
@@ -243,7 +252,7 @@ PAGES = [
     {
         "slug": "victoria-emergency-alerts.html",
         "title": "Victoria Emergency Alerts on Your Phone | Spotter",
-        "description": "Get Victoria's VicEmergency incident alerts on your phone, ranked by distance to you and your family. Covers Melbourne and regional Victoria. Free on iOS and Android.",
+        "description": "Get Victoria's VicEmergency incident alerts on your phone, ranked by distance to you and your family, plus NSW and Queensland fire feeds. Free on iOS and Android.",
         "placename": "Victoria, Australia",
         "breadcrumb": "Victoria",
         "h1": 'Victoria emergency alerts, <span class="gradient-text-primary">on your phone</span>',
